@@ -2,7 +2,7 @@
 
 This README file documents the progress and tech stack used to develop the Pearl Hacks marketing website for the 2024 hackathon.
 
-## Website Structure 🏗️
+## Current Website Structure 🏗️
 
 - **Home Page** (`index.html`): Displays event information and includes a dynamic "Happening Now" section based on the user's time zone.
 
