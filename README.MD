@@ -28,6 +28,8 @@ This README file documents the progress and tech stack used to develop the Pearl
 
 ## Planned Updates and Changes 🚀
 
+Migrating the codebase to using React and Firestore to reduce data loading time and enable the implementation of the following features!
+
 - **Navigation Bar**: Combine "Schedule," "Workshops," and "Events" into a single "Schedule" page.
 
 - **Schedule/Workshops/Events Page**: Rename to "Day Of" and link to the hacker guide. Implement a day-by-day view of the schedule for the in-person event. Display a calendar view with color-coded blocks for workshops, social events, etc.
