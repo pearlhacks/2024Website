@@ -41,5 +41,3 @@ Migrating the codebase to using React and Firestore to reduce data loading time 
 - **Live**: Implement a real-time updates section during the event.
 
 - **Other**: Add a dark mode option, a magic wand icon for mode switching, and enhance visibility of social media links. Update the "Past Projects" section to include 2022 projects.
-
-Feel free to modify this README file as you develop the Pearl Hacks marketing website! 😊
