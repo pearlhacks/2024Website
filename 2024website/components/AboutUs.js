@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Typography, Button, Grid } from "@mui/material";
-import backgroundSvg from "../public/Accent4.svg";
-import transitionSvg from "../public/Transition.svg";
-import graphicSvg from "../public/Secondary Graphic no bg.svg";
+import transitionSvg from "../public/images/Transition.svg";
+import graphicSvg from "../public/images/Secondary Graphic no bg.svg";
 
 const AboutUs = () => {
   return (

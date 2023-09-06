@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Link } from "@mui/material";
+import { SPREADSHEET_ID, API_KEY } from "../config";
 
 // Replace with your Google Sheets API credentials
-const SPREADSHEET_ID = "YOUR_SPREADSHEET_ID";
-const API_KEY = "YOUR_API_KEY";
+const TAB_ID = "1871449303"; // Specify the GID of the desired tab
 
 const SponsorList = () => {
   const [sponsors, setSponsors] = useState([]);
 
   useEffect(() => {
-    // Fetch data from Google Sheets API
+    // Fetch data from Google Sheets API for the specified tab (gid)
     fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/3.%20Sponsors?key=${API_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${TAB_ID}?key=${API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {

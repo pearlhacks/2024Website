@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Typography, Link } from "@mui/material";
+import SponsorList from "./SponsorList";
 
 const Sponsor = () => {
   return (
@@ -25,6 +26,7 @@ const Sponsor = () => {
             Our 2023 Sponsors
           </Typography>
           {/* Add your sponsor board here */}
+          <SponsorList />
         </section>
       </Container>
     </div>

@@ -10,14 +10,15 @@ export default function Home() {
     <div>
       <Head>
         <title>Pearl Hacks</title>
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/images/logo.svg" />
       </Head>
 
       <main>
+        <Navbar backgroundColor={"transparent"} />
         <HeroSection />
         <AboutUs />
         <Sponsor />
-        <Footer />
+        <Footer backgroundColor={"#42A5CC"} />
       </main>
     </div>
   );

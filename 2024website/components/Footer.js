@@ -6,15 +6,15 @@ import {
   Divider,
   IconButton,
 } from "@mui/material";
-import footerSvg from "../public/Footer.svg";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import footerSvg from "../public/images/Footer.svg";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"; // Changed to outline heart icon
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-const Footer = () => {
+const Footer = ({ backgroundColor }) => {
   return (
     <div
       style={{
@@ -24,12 +24,15 @@ const Footer = () => {
         backgroundImage: `url(${footerSvg.src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundColor: "#42A5CC",
+        backgroundColor: backgroundColor,
         width: "100%",
-        height: "600px",
+        height: "700px",
+        paddingBottom: "20px", // Added padding at the bottom
       }}
     >
-      <Container>
+      <Container
+        padding="0 100px" // Added padding on left and right
+      >
         <Grid container spacing={3} pt={5} pb={3}>
           {/* Column 1: Keep up with us */}
           <Grid item xs={12} sm={4}>
@@ -78,7 +81,7 @@ const Footer = () => {
           </Grid>
         </Grid>
         {/* Horizontal Divider */}
-        <Divider sx={{ mt: 1, mb: 1 }} />
+        <Divider sx={{ mt: 1, mb: 1 }} color="#ffecac" />
 
         {/* Made with love */}
         <Grid
@@ -87,27 +90,44 @@ const Footer = () => {
           justifyContent="space-between" // To place items at either end
         >
           <Grid item>
-            <Typography variant="body1" color="textPrimary">
+            <Typography variant="body1" color="#ffecac">
+              {" "}
+              {/* Changed text color */}
               Made with{" "}
-              <FavoriteIcon sx={{ verticalAlign: "middle", color: "red" }} /> by
-              Pearl Hacks
+              <FavoriteBorderIcon
+                sx={{
+                  verticalAlign: "middle",
+                  color: "#ffecac", // Changed heart color
+                }}
+              />{" "}
+              by Pearl Hacks
             </Typography>
           </Grid>
           <Grid item>
             {/* Social Media Icons */}
-            <IconButton color="primary">
+            <IconButton color="#ffecac">
+              {" "}
+              {/* Changed icon color */}
               <FacebookIcon />
             </IconButton>
-            <IconButton color="primary">
+            <IconButton color="#ffecac">
+              {" "}
+              {/* Changed icon color */}
               <InstagramIcon />
             </IconButton>
-            <IconButton color="primary">
+            <IconButton color="#ffecac">
+              {" "}
+              {/* Changed icon color */}
               <TwitterIcon />
             </IconButton>
-            <IconButton color="primary">
+            <IconButton color="#ffecac">
+              {" "}
+              {/* Changed icon color */}
               <EmailIcon />
             </IconButton>
-            <IconButton color="primary">
+            <IconButton color="#ffecac">
+              {" "}
+              {/* Changed icon color */}
               <GitHubIcon />
             </IconButton>
           </Grid>
