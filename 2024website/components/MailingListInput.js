@@ -1,20 +1,19 @@
 import React from "react";
+import TextField from "@mui/material/TextField";
 
-export function MailingListInput() {
+function mailing() {
   return (
-    <input
+    <TextField
       type="email"
-      placeholder="Email Address"
-      style={{
-        width: "100%",
-        fontFamily: "ProximaNova",
-        padding: "10px",
-        paddingLeft: "20px",
+      label="Email Address"
+      variant="outlined"
+      fullWidth
+      sx={{
         borderRadius: "25px", // Make it rounder
-        backgroundColor: "#ffffff", // Change the background color
-        border: "1px solid #eda901", // Change the border color
-        boxSizing: "border-box", // Ensure padding doesn't affect width
+        backgroundColor: "lightgray", // Change the background color
       }}
     />
   );
 }
+
+export default YourComponent;

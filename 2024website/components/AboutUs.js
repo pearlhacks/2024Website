@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Typography, Button, Grid } from "@mui/material";
 import transitionSvg from "../public/images/Transition.svg";
 import graphicSvg from "../public/images/Secondary Graphic no bg.svg";
+import { SecondaryButton } from "./CustomButton";
 
 const AboutUs = () => {
   return (
@@ -25,13 +26,12 @@ const AboutUs = () => {
             padding: "100px", // Add padding for spacing
           }}
         >
-          <Typography variant="h3" component="h1" color="textPrimary">
+          <Typography variant="h3" component="h1">
             What is Pearl Hacks?
           </Typography>
           <Typography
-            variant="body1"
+            variant="p"
             component="p"
-            color="textPrimary"
             style={{ margin: "20px 0" }} // Add margin for spacing
           >
             Pearl Hacks is a hackathon for women and gender non-conforming
@@ -39,9 +39,8 @@ const AboutUs = () => {
             are looking for a supportive environment to explore technology.
           </Typography>
           <Typography
-            variant="body1"
+            variant="p"
             component="p"
-            color="textPrimary"
             style={{ margin: "20px 0" }} // Add margin for spacing
           >
             Participants work in teams to create incredible projects in 24 hours
@@ -49,19 +48,15 @@ const AboutUs = () => {
             the while, they’ll get to meet some fantastic people, enjoy fun
             games, collect swag, and eat free food.
           </Typography>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} marginBottom={"30px"}>
             <Grid item>
-              <Button variant="contained" color="primary">
-                About Us
-              </Button>
+              <SecondaryButton>About Us</SecondaryButton>
             </Grid>
             <Grid item>
-              <Button variant="contained" color="primary">
-                Show Past Projects
-              </Button>
+              <SecondaryButton>Show Past Projects</SecondaryButton>
             </Grid>
           </Grid>
-          <Grid container alignItems="center" spacing={2}>
+          <Grid container alignItems="center" spacing={"5px"}>
             <div
               style={{
                 display: "flex",
@@ -79,16 +74,18 @@ const AboutUs = () => {
                 }}
               />
               <div>
-                <Typography variant="body1" component="p" color="textPrimary">
+                <Typography variant="h4" component="p">
                   DON'T KNOW HOW TO CODE?
                 </Typography>
-                <Typography variant="body1" component="p" color="textPrimary">
+                <Typography
+                  variant="p"
+                  component="p"
+                  style={{ margin: "20px 0" }}
+                >
                   Come anyway! We have workshops, mentors, and fun events for
                   all skill levels.
                 </Typography>
-                <Button variant="contained" color="primary">
-                  More FAQ
-                </Button>
+                <SecondaryButton>More FAQ</SecondaryButton>
               </div>
             </div>
           </Grid>

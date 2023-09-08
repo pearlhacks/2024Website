@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# api keys
+config.js
+
 # production
 /build
 
