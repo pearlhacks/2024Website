@@ -1,11 +1,26 @@
 import React from "react";
-import { Container, Typography } from "@mui/material";
-import aboutHeader from "../public/images/Header.svg"; // Import the SVG image
+import { Container, Typography, Grid } from "@mui/material";
+import aboutHeader from "../public/images/Header.svg";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Head from "next/head";
+import FAQCard from "../components/FAQCard"; // Import the FAQCard component
+import faqData from "../public/data/faq.json"; // Import the faq data
 
-const About = () => {
+const FAQ = () => {
+  // Create an object to group FAQs by category
+  const groupedFaqs = faqData.reduce((acc, item) => {
+    const category = item["Category"];
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push({
+      question: item["Question"],
+      answer: item["Answer"],
+    });
+    return acc;
+  }, {});
+
   return (
     <div>
       <Head>
@@ -14,18 +29,18 @@ const About = () => {
       </Head>
       <div
         style={{
-          backgroundColor: "#ffecac", // Set the background color
+          backgroundColor: "#ffecac",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          position: "relative", // Add this to allow absolute positioning of text
+          position: "relative",
         }}
       >
         <Navbar backgroundColor={"#1876bd"} />
         <div
           style={{
             position: "relative",
-            zIndex: 1, // Set a higher z-index value to place text above the image
+            zIndex: 1,
           }}
         >
           <img
@@ -38,26 +53,42 @@ const About = () => {
             }}
           />
           <Typography
-            variant="h3" // Adjust the variant and styles as needed
+            variant="h2"
             style={{
               position: "absolute",
-              top: "35%", // Center vertically
-              left: "50%", // Center horizontally
-              transform: "translate(-50%, -50%)", // Center the text
-              color: "#ffecac", // Text color
+              top: "35%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              color: "#ffecac",
             }}
           >
             Pearl Hacks FAQs
           </Typography>
         </div>
         <Container style={{ padding: "0 100px" }}>
-          {/* Your content for the About Page */}
-          <Typography variant="h3" component="h1" style={{ color: "#267FAD" }}>
-            About Pearl Hacks
-          </Typography>
-          <Typography variant="body1" style={{ color: "#267FAD" }}>
-            This is some information about Pearl Hacks.
-          </Typography>
+          {/* Display FAQs by category */}
+          {Object.entries(groupedFaqs).map(([category, faqs]) => (
+            <div key={category}>
+              <Typography
+                variant="h3"
+                component="h2"
+                style={{
+                  color: "#eda901",
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                }}
+              >
+                {category}
+              </Typography>
+              <Grid container spacing={2}>
+                {faqs.map((faq, index) => (
+                  <Grid item xs={12} sm={6} key={index}>
+                    <FAQCard question={faq.question} answer={faq.answer} />
+                  </Grid>
+                ))}
+              </Grid>
+            </div>
+          ))}
         </Container>
         <Footer />
       </div>
@@ -65,4 +96,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default FAQ;

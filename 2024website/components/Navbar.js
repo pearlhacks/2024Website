@@ -13,12 +13,9 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import EmailIcon from "@mui/icons-material/Email";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import logoSvg from "../public/images/logo.svg";
+import CloseIcon from "@mui/icons-material/Close";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const Navbar = ({ backgroundColor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -106,25 +103,7 @@ const Navbar = ({ backgroundColor }) => {
                       Pearl Hacks
                     </Link>
                   </Typography>
-                  {isWideWindow && (
-                    <div style={{ marginLeft: "10px", color: "#ffecac" }}>
-                      <IconButton color="inherit">
-                        <FacebookIcon />
-                      </IconButton>
-                      <IconButton color="inherit">
-                        <InstagramIcon />
-                      </IconButton>
-                      <IconButton color="inherit">
-                        <TwitterIcon />
-                      </IconButton>
-                      <IconButton color="inherit">
-                        <EmailIcon />
-                      </IconButton>
-                      <IconButton color="inherit">
-                        <GitHubIcon />
-                      </IconButton>
-                    </div>
-                  )}
+                  {isWideWindow && <SocialMediaIcons color="#ffecac" />}
                 </div>
               </Grid>
 
@@ -168,9 +147,13 @@ const Navbar = ({ backgroundColor }) => {
                   </>
                 ) : (
                   <IconButton
-                    color="inherit"
+                    color="#ffecac"
                     onClick={toggleMenu}
-                    style={{ display: "block", marginLeft: "auto" }}
+                    style={{
+                      display: "block",
+                      marginLeft: "auto",
+                      color: "#F5EDC9",
+                    }}
                   >
                     <MenuIcon />
                   </IconButton>
@@ -184,24 +167,44 @@ const Navbar = ({ backgroundColor }) => {
       {/* Hamburger Menu */}
       {!isWideWindow && (
         <Drawer
-          anchor="right"
+          anchor="top"
           open={menuOpen}
           onClose={closeMenu}
           variant="temporary"
+          PaperProps={{
+            style: {
+              background: "#1876bd",
+              color: "#ffecac", // Text color
+              paddingTop: "20px",
+              boxShadow: "none", // Remove the shadow
+            },
+          }}
         >
+          <IconButton
+            style={{ position: "absolute", top: "5px", right: "5px" }}
+            onClick={closeMenu}
+          >
+            <CloseIcon style={{ color: "#ffecac" }} /> {/* Close button (X) */}
+          </IconButton>
           <List onClick={closeMenu}>
             <ListItem button>
-              <Link href="/about" color="inherit">
+              <Link href="/about" color="inherit" underline="none">
+                {" "}
+                {/* Remove underline */}
                 <ListItemText primary="About Us" />
               </Link>
             </ListItem>
             <ListItem button>
-              <Link href="/faq" color="inherit">
+              <Link href="/faq" color="inherit" underline="none">
+                {" "}
+                {/* Remove underline */}
                 <ListItemText primary="FAQ" />
               </Link>
             </ListItem>
             <ListItem button>
-              <Link href="/resources" color="inherit">
+              <Link href="/resources" color="inherit" underline="none">
+                {" "}
+                {/* Remove underline */}
                 <ListItemText primary="Resources" />
               </Link>
             </ListItem>

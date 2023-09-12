@@ -31,10 +31,10 @@ const Sponsor = () => {
         </Typography>
 
         <section className="container pb-5 pt-3 rounded" id="sponsorlogos">
-          <Typography variant="h3" align="center" mt={5}>
+          {/* Add your sponsor board here */}
+          <Typography variant="h3" align="center" mt={5} mb={5}>
             Our 2023 Sponsors
           </Typography>
-          {/* Add your sponsor board here */}
           <SponsorList />
         </section>
       </Container>

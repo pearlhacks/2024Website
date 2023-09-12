@@ -12,11 +12,12 @@
 /.next/
 /out/
 
-# api keys
-config.js
 
 # production
 /build
+
+# data
+/public/data
 
 # misc
 .DS_Store

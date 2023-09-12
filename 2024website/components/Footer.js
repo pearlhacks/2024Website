@@ -14,10 +14,12 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { MailingListInput } from "./MailingListInput";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const Footer = ({ backgroundColor }) => {
   return (
     <div
+      fullWidth
       style={{
         display: "flex",
         flexDirection: "column",
@@ -26,8 +28,7 @@ const Footer = ({ backgroundColor }) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundColor: backgroundColor,
-        width: "100%",
-        height: "700px",
+        minHeight: "700px",
         paddingBottom: "20px", // Added padding at the bottom
         paddingLeft: "100px",
         paddingRight: "100px",
@@ -108,32 +109,7 @@ const Footer = ({ backgroundColor }) => {
             </Typography>
           </Grid>
           <Grid item>
-            {/* Social Media Icons */}
-            <IconButton color="#1876bd">
-              {" "}
-              {/* Changed icon color */}
-              <FacebookIcon />
-            </IconButton>
-            <IconButton color="#1876bd">
-              {" "}
-              {/* Changed icon color */}
-              <InstagramIcon />
-            </IconButton>
-            <IconButton color="#1876bd">
-              {" "}
-              {/* Changed icon color */}
-              <TwitterIcon />
-            </IconButton>
-            <IconButton color="#1876bd">
-              {" "}
-              {/* Changed icon color */}
-              <EmailIcon />
-            </IconButton>
-            <IconButton color="#1876bd">
-              {" "}
-              {/* Changed icon color */}
-              <GitHubIcon />
-            </IconButton>
+            <SocialMediaIcons color="#366DA9" />
           </Grid>
         </Grid>
       </Container>
