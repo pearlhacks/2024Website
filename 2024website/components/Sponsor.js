@@ -2,16 +2,26 @@ import React from "react";
 import { Container, Typography, Link } from "@mui/material";
 import SponsorList from "./SponsorList";
 
-const Sponsor = () => {
+const Sponsor = ({ selectedTheme }) => {
   return (
-    <div style={{ backgroundColor: "#42A5CC", minHeight: "100vh" }}>
+    <div
+      style={{
+        backgroundColor: selectedTheme === "dark" ? "#42A5CC" : "#BBDFED",
+        minHeight: "100vh",
+      }}
+    >
       <Container
         style={{
           position: "relative",
           padding: "100px", // Add padding for spacing
         }}
       >
-        <Typography body1="p" color={"#F5EDC9"} align="center" pt={5}>
+        <Typography
+          body1="p"
+          color={selectedTheme === "dark" ? "#F5EDC9" : "#1876bd"}
+          align="center"
+          pt={5}
+        >
           Pearl Hacks would not be possible without help from our sponsors.
           Consider becoming a sponsor to support our efforts. For more
           information, email{" "}

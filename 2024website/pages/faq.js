@@ -7,7 +7,7 @@ import Head from "next/head";
 import FAQCard from "../components/FAQCard"; // Import the FAQCard component
 import faqData from "../public/data/faq.json"; // Import the faq data
 
-const FAQ = () => {
+const FAQ = ({ toggleTheme, selectedTheme }) => {
   // Create an object to group FAQs by category
   const groupedFaqs = faqData.reduce((acc, item) => {
     const category = item["Category"];
@@ -36,7 +36,6 @@ const FAQ = () => {
           position: "relative",
         }}
       >
-        <Navbar backgroundColor={"#1876bd"} />
         <div
           style={{
             position: "relative",
@@ -59,7 +58,7 @@ const FAQ = () => {
               top: "35%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              color: "#ffecac",
+              color: "#FFFFFF",
             }}
           >
             Pearl Hacks FAQs
@@ -68,14 +67,18 @@ const FAQ = () => {
         <Container style={{ padding: "0 100px" }}>
           {/* Display FAQs by category */}
           {Object.entries(groupedFaqs).map(([category, faqs]) => (
-            <div key={category}>
+            <div
+              key={category}
+              style={{
+                marginBottom: "50px",
+              }}
+            >
               <Typography
                 variant="h3"
                 component="h2"
                 style={{
                   color: "#eda901",
                   marginBottom: "20px",
-                  marginTop: "20px",
                 }}
               >
                 {category}

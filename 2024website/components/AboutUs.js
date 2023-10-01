@@ -1,14 +1,16 @@
 import React from "react";
 import { Container, Typography, Button, Grid } from "@mui/material";
-import transitionSvg from "../public/images/Transition.svg";
+import Link from "next/link";
+import transitionSvgDark from "../public/images/Transition.svg";
+import transitionSvgLight from "../public/images/TransitionLight.svg";
 import graphicSvg from "../public/images/Secondary Graphic no bg.svg";
 import { SecondaryButton } from "./CustomButton";
 
-const AboutUs = () => {
+const AboutUs = ({ selectedTheme }) => {
   return (
     <div
       style={{
-        backgroundColor: "#267FAD",
+        backgroundColor: selectedTheme == "dark" ? "#267FAD" : "#78ADCF",
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -50,10 +52,14 @@ const AboutUs = () => {
           </Typography>
           <Grid container spacing={2} marginBottom={"30px"}>
             <Grid item>
-              <SecondaryButton>About Us</SecondaryButton>
+              <Link href="/about" passHref>
+                <SecondaryButton>About Us</SecondaryButton>
+              </Link>
             </Grid>
             <Grid item>
-              <SecondaryButton>Show Past Projects</SecondaryButton>
+              <Link href="https://pearlhacks2023.devpost.com/" passHref>
+                <SecondaryButton>Show Past Projects</SecondaryButton>
+              </Link>
             </Grid>
           </Grid>
           <Grid container alignItems="center" spacing={"5px"}>
@@ -85,7 +91,9 @@ const AboutUs = () => {
                   Come anyway! We have workshops, mentors, and fun events for
                   all skill levels.
                 </Typography>
-                <SecondaryButton>More FAQ</SecondaryButton>
+                <Link href="/faq" passHref>
+                  <SecondaryButton>More FAQs</SecondaryButton>
+                </Link>
               </div>
             </div>
           </Grid>
@@ -93,7 +101,10 @@ const AboutUs = () => {
       </div>
       <div
         style={{
-          backgroundImage: `url(${transitionSvg.src})`,
+          backgroundImage:
+            selectedTheme == "dark"
+              ? `url(${transitionSvgDark.src})`
+              : `url(${transitionSvgLight.src})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           width: "100%",

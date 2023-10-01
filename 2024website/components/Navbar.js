@@ -16,8 +16,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logoSvg from "../public/images/logo.svg";
 import CloseIcon from "@mui/icons-material/Close";
 import SocialMediaIcons from "./SocialMediaIcons";
+import DarkModeToggle from "./DarkModeToggle";
 
-const Navbar = ({ backgroundColor }) => {
+const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isWideWindow, setIsWideWindow] = useState(true);
 
@@ -79,7 +80,7 @@ const Navbar = ({ backgroundColor }) => {
                     component="div"
                     color="inherit"
                     style={{
-                      color: "#ffecac",
+                      color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
                       display: "flex",
                       alignItems: "center",
                     }}
@@ -97,13 +98,19 @@ const Navbar = ({ backgroundColor }) => {
                       color="inherit"
                       style={{
                         textDecoration: "none",
-                        color: "#ffecac",
+                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
+                        fontFamily: "CaviarDreams",
+                        fontWeight: "700",
                       }}
                     >
                       Pearl Hacks
                     </Link>
                   </Typography>
-                  {isWideWindow && <SocialMediaIcons color="#ffecac" />}
+                  {isWideWindow && (
+                    <SocialMediaIcons
+                      color={selectedTheme === "dark" ? "#ffecac" : "#1876bd"}
+                    />
+                  )}
                 </div>
               </Grid>
 
@@ -117,7 +124,7 @@ const Navbar = ({ backgroundColor }) => {
                       style={{
                         textDecoration: "none",
                         margin: "0 10px",
-                        color: "#ffecac",
+                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
                       }}
                     >
                       About Us
@@ -128,7 +135,7 @@ const Navbar = ({ backgroundColor }) => {
                       style={{
                         textDecoration: "none",
                         margin: "0 10px",
-                        color: "#ffecac",
+                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
                       }}
                     >
                       FAQ
@@ -139,11 +146,15 @@ const Navbar = ({ backgroundColor }) => {
                       style={{
                         textDecoration: "none",
                         margin: "0 10px",
-                        color: "#ffecac",
+                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
                       }}
                     >
                       Resources
                     </Link>
+                    <DarkModeToggle
+                      toggleTheme={toggleTheme}
+                      selectedTheme={selectedTheme}
+                    />
                   </>
                 ) : (
                   <IconButton
@@ -152,7 +163,7 @@ const Navbar = ({ backgroundColor }) => {
                     style={{
                       display: "block",
                       marginLeft: "auto",
-                      color: "#F5EDC9",
+                      color: selectedTheme === "dark" ? "#F5EDC9" : "#1876bd",
                     }}
                   >
                     <MenuIcon />

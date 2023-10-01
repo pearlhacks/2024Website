@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import { PrimaryButton } from "../components/CustomButton";
 
-const About = () => {
+const About = ({ toggleTheme, selectedTheme }) => {
   return (
     <div>
       <Head>
@@ -24,7 +24,6 @@ const About = () => {
           position: "relative",
         }}
       >
-        <Navbar backgroundColor={"#1876bd"} />
         <div
           style={{
             position: "relative",
@@ -47,7 +46,7 @@ const About = () => {
               top: "35%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              color: "#F5EDC9",
+              color: "#FFFFFF",
             }}
           >
             About Us
@@ -96,6 +95,7 @@ const About = () => {
             </Typography>
             <br />
             <br />
+            <br />
             <Typography
               variant="p"
               color={"#1876bd"}
@@ -140,6 +140,8 @@ const About = () => {
                 Learn more
               </PrimaryButton>
             </div>
+            <br />
+            <br />
           </div>
 
           <div style={{ marginTop: "20px" }}>

@@ -1,15 +1,21 @@
 import React from "react";
 import { Container, Typography, Button, Grid } from "@mui/material";
-import mascotImage from "../public/images/PH2024_MainGraphic.png";
-import background from "../public/images/WebsiteBG_Updated.svg";
+import mascotImage from "../public/images/PH2024_MainGraphic.svg";
+import backgroundDark from "../public/images/WebsiteBG_Updated.svg";
+import backgroundLight from "../public/images/Website_BG_Light.svg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { PrimaryButton } from "./CustomButton";
-const HeroSection = () => {
+import { HeroButton } from "./CustomButton";
+const HeroSection = ({ selectedTheme }) => {
+  console.log(selectedTheme);
   return (
     <div
       style={{
-        background: `url(${background.src})`, // Set background image
+        background:
+          selectedTheme === "dark"
+            ? `url(${backgroundDark.src})`
+            : `url(${backgroundLight.src})`, // Set background image
         backgroundSize: "cover", // Make the background cover the entire element
+        backgroundPosition: "center", // Center the background image
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -18,7 +24,7 @@ const HeroSection = () => {
       }}
     >
       {/* Hero Content */}
-      <Container>
+      <Container style={{ display: "flex", justifyContent: "center" }}>
         <Grid container spacing={2}>
           <Grid
             item
@@ -30,7 +36,14 @@ const HeroSection = () => {
             <img
               src={mascotImage.src}
               alt="Mascot"
-              style={{ width: "100%", height: "auto" }}
+              style={{
+                display: "block",
+                margin: "0 auto",
+                width: "100%",
+                height: "auto",
+                animation:
+                  "flyInFromLeft 1s ease-in-out, bobble 0.5s alternate infinite, launch 1s ease-in-out",
+              }}
             />
           </Grid>
           <Grid
@@ -46,11 +59,11 @@ const HeroSection = () => {
                 component="h4"
                 style={{
                   fontStyle: "italic",
-                  color: "#f7cf68",
+                  color: selectedTheme === "dark" ? "#96d0ff" : "#1876bd",
                   marginBottom: "5px",
                 }}
               >
-                soar with
+                rise with
               </Typography>
 
               <Typography
@@ -66,15 +79,16 @@ const HeroSection = () => {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  color: "#f7cf68",
+                  color: selectedTheme === "dark" ? "#96d0ff" : "#1876bd",
                   marginBottom: "5px",
+                  fontWeight: "700",
                 }}
               >
                 <AccessTimeIcon style={{ marginRight: "8px" }} />
                 February 23-25th, 2024
               </Typography>
 
-              <PrimaryButton>Register now</PrimaryButton>
+              <HeroButton theme={selectedTheme}>Register now</HeroButton>
             </div>
           </Grid>
         </Grid>

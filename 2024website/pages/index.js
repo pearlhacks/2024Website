@@ -5,7 +5,7 @@ import Sponsor from "../components/Sponsor";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-export default function Home() {
+export default function Home({ selectedTheme }) {
   return (
     <div>
       <Head>
@@ -14,11 +14,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <Navbar backgroundColor={"transparent"} />
-        <HeroSection />
-        <AboutUs />
-        <Sponsor />
-        <Footer backgroundColor={"#42A5CC"} />
+        <HeroSection selectedTheme={selectedTheme} />
+        <AboutUs selectedTheme={selectedTheme} />
+        <Sponsor selectedTheme={selectedTheme} />
+        <Footer
+          backgroundColor={selectedTheme === "dark" ? "#42A5CC" : "#BBDFED"}
+        />
       </main>
     </div>
   );
