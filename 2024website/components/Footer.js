@@ -27,11 +27,16 @@ const Footer = ({ backgroundColor }) => {
         backgroundImage: `url(${footerSvg.src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        maxWidth: "100%",
         backgroundColor: backgroundColor,
-        minHeight: "700px",
-        paddingBottom: "20px", // Added padding at the bottom
+        backgroundPosition: "center",
+        position: "relative",
+        bottom: 0, // Stick to the bottom of the page
+        minHeight: "900px",
+        paddingBottom: "100px", // Added padding at the bottom
         paddingLeft: "100px",
         paddingRight: "100px",
+        width: "100%", // Ensure the width matches the background image
       }}
     >
       <Container>

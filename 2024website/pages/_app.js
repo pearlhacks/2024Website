@@ -1,3 +1,5 @@
+// _app.js
+
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
@@ -15,18 +17,31 @@ const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  const [activeTheme, setActiveTheme] = useState(darkTheme);
-  const [selectedTheme, setSelectedTheme] = useState("dark");
+  const [activeTheme, setActiveTheme] = useState(lightTheme);
+  const [selectedTheme, setSelectedTheme] = useState("light");
+
+  // Function to get the active theme based on selectedTheme
   function getActiveTheme(themeMode) {
     return themeMode === "light" ? lightTheme : darkTheme;
   }
-  useEffect(() => {
-    setActiveTheme(getActiveTheme(selectedTheme));
-  }, [selectedTheme]);
+
+  // Function to toggle the theme
   const toggleTheme = () => {
     const desiredTheme = selectedTheme === "light" ? "dark" : "light";
     setSelectedTheme(desiredTheme);
   };
+
+  // Automatically change the theme based on time
+  useEffect(() => {
+    const currentTime = new Date().getHours();
+    const isDayTime = currentTime >= 6 && currentTime < 18; // You can adjust the time range as needed
+
+    setSelectedTheme(isDayTime ? "light" : "dark");
+  }, []);
+
+  useEffect(() => {
+    setActiveTheme(getActiveTheme(selectedTheme));
+  }, [selectedTheme]);
 
   return (
     <CacheProvider value={emotionCache}>

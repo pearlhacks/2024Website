@@ -15,8 +15,9 @@ const HeroSection = ({ selectedTheme }) => {
             ? `url(${backgroundDark.src})`
             : `url(${backgroundLight.src})`, // Set background image
         backgroundSize: "cover", // Make the background cover the entire element
-        backgroundPosition: "center", // Center the background image
-        minHeight: "100vh",
+        backgroundPositionX: "center", // Center the background horizontally
+        backgroundPositionY: "top", // Move the background image to the top
+        height: "120vh", // Set the height to 100% of the viewport height
         display: "flex",
         flexDirection: "column",
         alignItems: "center", // Center content horizontally
@@ -88,7 +89,16 @@ const HeroSection = ({ selectedTheme }) => {
                 February 23-25th, 2024
               </Typography>
 
-              <HeroButton theme={selectedTheme}>Register now</HeroButton>
+              <HeroButton theme={selectedTheme}>
+                <a
+                  href="https://pearlhacks.us17.list-manage.com/subscribe?u=211594c9660fc6331ed123271&id=ebe9408826"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Register now
+                </a>
+              </HeroButton>
             </div>
           </Grid>
         </Grid>

@@ -6,7 +6,7 @@ const Sponsor = ({ selectedTheme }) => {
   return (
     <div
       style={{
-        backgroundColor: selectedTheme === "dark" ? "#42A5CC" : "#BBDFED",
+        backgroundColor: selectedTheme === "dark" ? "#42A5CC" : "#b2e0ef",
         minHeight: "100vh",
       }}
     >
@@ -45,7 +45,7 @@ const Sponsor = ({ selectedTheme }) => {
           <Typography variant="h3" align="center" mt={5} mb={5}>
             Our 2023 Sponsors
           </Typography>
-          <SponsorList />
+          <SponsorList style={{ zIndex: 1 }} />
         </section>
       </Container>
     </div>

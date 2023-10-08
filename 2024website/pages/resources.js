@@ -79,6 +79,7 @@ const Resources = ({ toggleTheme, selectedTheme }) => {
           </Grid>
           <br />
           <br />
+          <br />
           {/* Display Beginner Hackers Resources */}
           <Typography variant="h3" component="h2" style={{ color: "#eda901" }}>
             Useful Tools & Articles

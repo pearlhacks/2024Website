@@ -32,9 +32,20 @@ export function MailingListInput() {
   };
 
   return (
-    <div style={containerStyle}>
-      <input type="email" placeholder="Email Address" style={inputStyle} />
-      <button style={buttonStyle}>Subscribe</button>
-    </div>
+    <form
+      action="https://pearlhacks.us17.list-manage.com/subscribe?u=211594c9660fc6331ed123271&id=ebe9408826"
+      method="POST"
+      style={containerStyle}
+    >
+      <input
+        type="email"
+        name="EMAIL" // Add a name attribute for the email input
+        placeholder="Email Address"
+        style={inputStyle}
+      />
+      <button type="submit" style={buttonStyle}>
+        Subscribe
+      </button>
+    </form>
   );
 }

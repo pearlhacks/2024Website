@@ -10,7 +10,7 @@ const AboutUs = ({ selectedTheme }) => {
   return (
     <div
       style={{
-        backgroundColor: selectedTheme == "dark" ? "#267FAD" : "#78ADCF",
+        backgroundColor: selectedTheme == "dark" ? "#317fb0" : "#67afd3",
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -106,9 +106,12 @@ const AboutUs = ({ selectedTheme }) => {
               ? `url(${transitionSvgDark.src})`
               : `url(${transitionSvgLight.src})`,
           backgroundRepeat: "no-repeat",
+          display: "flex",
+          backgroundPosition: "center",
           backgroundSize: "cover",
           width: "100%",
-          height: "300px",
+          maxHeight: "800px",
+          height: "500px",
         }}
       ></div>
     </div>
