@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "source": "2024website",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-east1"
+    }
+  }
+}
