@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Grid,
@@ -17,6 +17,24 @@ import { MailingListInput } from "./MailingListInput";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 const Footer = ({ backgroundColor }) => {
+  const [isWideWindow, setIsWideWindow] = useState(true);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
+    };
+
+    // Add an event listener to check the window width
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Initial check
+    checkWindowWidth();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []);
   return (
     <div
       fullWidth
@@ -32,16 +50,17 @@ const Footer = ({ backgroundColor }) => {
         backgroundPosition: "center",
         position: "relative",
         bottom: 0, // Stick to the bottom of the page
-        minHeight: "900px",
-        paddingBottom: "100px", // Added padding at the bottom
-        paddingLeft: "100px",
-        paddingRight: "100px",
+        minHeight: isWideWindow ? "900px" : "1200px", // Added min height
+        paddingBottom: isWideWindow ? "100px" : "50px", // Added padding at the bottom
+        paddingLeft: isWideWindow ? "100px" : "50px",
+        paddingRight: isWideWindow ? "100px" : "50px",
         width: "100%", // Ensure the width matches the background image
       }}
     >
       <Container>
         <Grid container spacing={3} pt={5} pb={3}>
           {/* Column 1: Keep up with us */}
+
           <Grid item xs={12} sm={4}>
             <Typography variant="h4" color={"#F5EDC9"}>
               KEEP UP WITH US

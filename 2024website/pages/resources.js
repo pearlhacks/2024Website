@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Typography, Grid } from "@mui/material";
 import aboutHeader from "../public/images/Header.svg";
 import Footer from "../components/Footer";
@@ -18,6 +18,24 @@ const Resources = ({ toggleTheme, selectedTheme }) => {
   const mentalHealthResources = resourcesData["Social & Mental Resources"];
   const pastProjectsResources = resourcesData["Pearl Hacks Projects"];
 
+  const [isWideWindow, setIsWideWindow] = useState(true);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
+    };
+
+    // Add an event listener to check the window width
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Initial check
+    checkWindowWidth();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []);
   return (
     <div>
       <Head>
@@ -49,7 +67,7 @@ const Resources = ({ toggleTheme, selectedTheme }) => {
             }}
           />
           <Typography
-            variant="h2"
+            variant={isWideWindow ? "h2" : "h3"}
             style={{
               position: "absolute",
               top: "35%",
@@ -61,7 +79,7 @@ const Resources = ({ toggleTheme, selectedTheme }) => {
             Resources
           </Typography>
         </div>
-        <Container style={{ padding: "0 100px" }}>
+        <Container style={{ padding: isWideWindow ? "0 100px" : "0 50px" }}>
           {/* Display Past Projects */}
           <Typography variant="h3" component="h2" style={{ color: "#eda901" }}>
             Past Projects

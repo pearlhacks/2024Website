@@ -25,8 +25,10 @@ const HeroSection = ({ selectedTheme }) => {
       }}
     >
       {/* Hero Content */}
-      <Container style={{ display: "flex", justifyContent: "center" }}>
-        <Grid container spacing={2}>
+      <Container
+        style={{ display: "flex", justifyContent: "center", padding: "50px" }}
+      >
+        <Grid container spacing={4}>
           <Grid
             item
             xs={12}
@@ -47,6 +49,7 @@ const HeroSection = ({ selectedTheme }) => {
               }}
             />
           </Grid>
+          {/* create horizontal width */}
           <Grid
             item
             xs={12}

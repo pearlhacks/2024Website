@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Typography, Button, Grid } from "@mui/material";
 import Link from "next/link";
 import transitionSvgDark from "../public/images/Transition.svg";
@@ -7,6 +7,24 @@ import graphicSvg from "../public/images/Secondary Graphic no bg.svg";
 import { SecondaryButton } from "./CustomButton";
 
 const AboutUs = ({ selectedTheme }) => {
+  const [isWideWindow, setIsWideWindow] = useState(true);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsWideWindow(window.innerWidth >= 768); // Adjust the breakpoint as needed
+    };
+
+    // Add an event listener to check the window width
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Initial check
+    checkWindowWidth();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []);
   return (
     <div
       style={{
@@ -25,7 +43,8 @@ const AboutUs = ({ selectedTheme }) => {
         <Container
           style={{
             position: "relative",
-            padding: "100px", // Add padding for spacing
+            paddingTop: "150px", // Add padding for spacing
+            padding: "50px", // Add padding for spacing
           }}
         >
           <Typography variant="h3" component="h1">
@@ -66,18 +85,27 @@ const AboutUs = ({ selectedTheme }) => {
             <div
               style={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: isWideWindow ? "row" : "column",
                 alignItems: "center", // Center vertically
               }}
             >
               <img
                 src={graphicSvg.src}
                 alt="Your Image"
-                style={{
-                  width: "400px", // Adjust the width as needed
-                  height: "auto", // Maintain aspect ratio
-                  marginRight: "20px", // Add spacing between image and text
-                }}
+                style={
+                  isWideWindow
+                    ? {
+                        width: "400px", // Adjust the width as needed
+                        height: "auto", // Maintain aspect ratio
+                        marginLeft: "80px", // Add spacing between image and text
+                        marginRight: "20px", // Add spacing between image and text
+                      }
+                    : {
+                        width: "80%", // Adjust the width as needed
+                        height: "auto", // Maintain aspect ratio
+                        marginBottom: "20px", // Add spacing between image and text
+                      }
+                }
               />
               <div>
                 <Typography variant="h4" component="p">
@@ -110,7 +138,7 @@ const AboutUs = ({ selectedTheme }) => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           width: "100%",
-          maxHeight: "800px",
+          maxHeight: isWideWindow ? "800px" : "200px",
           height: "500px",
         }}
       ></div>

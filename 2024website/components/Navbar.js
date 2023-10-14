@@ -73,6 +73,7 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
+                    paddingTop: "10px",
                   }}
                 >
                   <Typography
@@ -85,26 +86,32 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
                       alignItems: "center",
                     }}
                   >
-                    <img
-                      src={logoSvg.src}
-                      alt="Logo"
-                      style={{
-                        height: "40px",
-                        marginRight: "10px",
-                      }}
-                    />
-                    <Link
-                      href="/"
-                      color="inherit"
-                      style={{
-                        textDecoration: "none",
-                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
-                        fontFamily: "CaviarDreams",
-                        fontWeight: "700",
-                      }}
-                    >
-                      Pearl Hacks
+                    <Link href="/">
+                      <img
+                        src={logoSvg.src}
+                        alt="Logo"
+                        style={{
+                          height: "40px",
+                          marginRight: "10px",
+                        }}
+                      />
                     </Link>
+
+                    {isWideWindow && (
+                      <Link
+                        href="/"
+                        color="inherit"
+                        style={{
+                          textDecoration: "none",
+                          color:
+                            selectedTheme === "dark" ? "#ffecac" : "#1876bd",
+                          fontFamily: "CaviarDreams",
+                          fontWeight: "700",
+                        }}
+                      >
+                        Pearl Hacks
+                      </Link>
+                    )}
                   </Typography>
                   {isWideWindow && (
                     <SocialMediaIcons

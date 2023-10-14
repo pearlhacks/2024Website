@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Typography, Grid } from "@mui/material";
 import aboutHeader from "../public/images/Header.svg";
 import Footer from "../components/Footer";
@@ -20,6 +20,25 @@ const FAQ = ({ toggleTheme, selectedTheme }) => {
     });
     return acc;
   }, {});
+
+  const [isWideWindow, setIsWideWindow] = useState(true);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
+    };
+
+    // Add an event listener to check the window width
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Initial check
+    checkWindowWidth();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []);
 
   return (
     <div>
@@ -52,7 +71,7 @@ const FAQ = ({ toggleTheme, selectedTheme }) => {
             }}
           />
           <Typography
-            variant="h2"
+            variant={isWideWindow ? "h2" : "h3"}
             style={{
               position: "absolute",
               top: "35%",
@@ -61,10 +80,10 @@ const FAQ = ({ toggleTheme, selectedTheme }) => {
               color: "#FFFFFF",
             }}
           >
-            Pearl Hacks FAQs
+            FAQs
           </Typography>
         </div>
-        <Container style={{ padding: "0 100px" }}>
+        <Container style={{ padding: isWideWindow ? "0 100px" : "0 50px" }}>
           {/* Display FAQs by category */}
           {Object.entries(groupedFaqs).map(([category, faqs]) => (
             <div

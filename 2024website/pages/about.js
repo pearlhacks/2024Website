@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Typography, Button } from "@mui/material";
 import aboutHeader from "../public/images/Header.svg";
 import leftImage from "../public/images/Photo1.JPG"; // Add your left image path
@@ -9,6 +9,24 @@ import Head from "next/head";
 import { PrimaryButton } from "../components/CustomButton";
 
 const About = ({ toggleTheme, selectedTheme }) => {
+  const [isWideWindow, setIsWideWindow] = useState(true);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
+    };
+
+    // Add an event listener to check the window width
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Initial check
+    checkWindowWidth();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []);
   return (
     <div>
       <Head>
@@ -40,7 +58,7 @@ const About = ({ toggleTheme, selectedTheme }) => {
             }}
           />
           <Typography
-            variant="h2"
+            variant={isWideWindow ? "h2" : "h3"}
             style={{
               position: "absolute",
               top: "35%",
@@ -52,7 +70,12 @@ const About = ({ toggleTheme, selectedTheme }) => {
             About Us
           </Typography>
         </div>
-        <Container style={{ padding: "0 100px", marginTop: "20px" }}>
+        <Container
+          style={{
+            padding: isWideWindow ? "0 100px" : "0 50px",
+            marginTop: "20px",
+          }}
+        >
           <div>
             {/* Left image */}
             <Typography
@@ -71,13 +94,21 @@ const About = ({ toggleTheme, selectedTheme }) => {
               <img
                 src={leftImage.src}
                 alt="Left Image"
-                style={{
-                  float: "right",
-                  width: "50%", // Adjust the size as needed
-                  marginLeft: "20px", // Add some margin between the images
-                  marginBottom: "20px", // Add some margin below the image
-                  borderRadius: "5px", // Add rounded corners
-                }}
+                style={
+                  isWideWindow
+                    ? {
+                        float: "right",
+                        width: "50%", // Adjust the size as needed
+                        marginLeft: "20px", // Add some margin between the images
+                        marginBottom: "20px", // Add some margin below the image
+                        borderRadius: "5px", // Add rounded corners
+                      }
+                    : {
+                        width: "100%", // Make the image take up the full width on narrow screens
+                        marginBottom: "20px", // Add some margin below the image
+                        borderRadius: "5px", // Add rounded corners
+                      }
+                }
               />
               Pearl Hacks was first held in 2014 as one of the only
               beginner-friendly hackathons targeted towards women at the time.
@@ -104,14 +135,22 @@ const About = ({ toggleTheme, selectedTheme }) => {
               <img
                 src={rightImage.src}
                 alt="Right Image"
-                style={{
-                  float: "left",
-                  width: "50%", // Adjust the size as needed
-                  marginRight: "20px", // Add some margin between the images
+                style={
+                  isWideWindow
+                    ? {
+                        float: "left",
+                        width: "50%", // Adjust the size as needed
+                        marginRight: "20px", // Add some margin between the images
 
-                  marginBottom: "20px", // Add some margin below the image
-                  borderRadius: "5px", // Add rounded corners
-                }}
+                        marginBottom: "20px", // Add some margin below the image
+                        borderRadius: "5px", // Add rounded corners
+                      }
+                    : {
+                        width: "100%", // Make the image take up the full width on narrow screens
+                        marginBottom: "20px", // Add some margin below the image
+                        borderRadius: "5px", // Add rounded corners
+                      }
+                }
               />
               By growing and learning from the last eight years of Pearl Hacks
               (which has nearly tripled in size), we now strive to be an open

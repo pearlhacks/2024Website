@@ -17,7 +17,7 @@ const SocialMediaIcons = ({ color }) => {
   };
 
   return (
-    <div style={{ marginLeft: "10px", color: color }}>
+    <div style={{ color: color }}>
       <IconButton
         color="inherit"
         onClick={() =>
@@ -39,15 +39,6 @@ const SocialMediaIcons = ({ color }) => {
         onMouseLeave={(e) => (e.target.style = iconStyle)}
       >
         <InstagramIcon />
-      </IconButton>
-      <IconButton
-        color="inherit"
-        onClick={() => window.open("https://twitter.com/PearlHacks", "_blank")}
-        style={iconStyle}
-        onMouseEnter={(e) => (e.target.style = iconHoverStyle)}
-        onMouseLeave={(e) => (e.target.style = iconStyle)}
-      >
-        <TwitterIcon />
       </IconButton>
       <IconButton
         color="inherit"

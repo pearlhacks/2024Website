@@ -13,7 +13,7 @@ const Sponsor = ({ selectedTheme }) => {
       <Container
         style={{
           position: "relative",
-          padding: "100px", // Add padding for spacing
+          padding: "50px", // Add padding for spacing
         }}
       >
         <Typography
@@ -45,7 +45,7 @@ const Sponsor = ({ selectedTheme }) => {
           <Typography variant="h3" align="center" mt={5} mb={5}>
             Our 2023 Sponsors
           </Typography>
-          <SponsorList style={{ zIndex: 1 }} />
+          <SponsorList />
         </section>
       </Container>
     </div>
