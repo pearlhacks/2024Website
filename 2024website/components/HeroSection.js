@@ -1,10 +1,20 @@
 import React from "react";
-import { Container, Typography, Button, Grid } from "@mui/material";
+import { Container, Typography, IconButton, Grid } from "@mui/material";
 import mascotImage from "../public/images/PH2024_MainGraphic.svg";
 import backgroundDark from "../public/images/WebsiteBG_Updated.svg";
 import backgroundLight from "../public/images/Website_BG_Light.svg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { HeroButton } from "./CustomButton";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import "../styles/animation.module.css";
+
+const scrollToContent = () => {
+  window.scrollTo({
+    top: 1000, // Scroll to 20px from the top
+    behavior: "smooth",
+  });
+};
+
 const HeroSection = ({ selectedTheme }) => {
   console.log(selectedTheme);
   return (
@@ -47,6 +57,7 @@ const HeroSection = ({ selectedTheme }) => {
                 animation:
                   "flyInFromLeft 1s ease-in-out, bobble 0.5s alternate infinite, launch 1s ease-in-out",
               }}
+              id="animate-right"
             />
           </Grid>
           {/* create horizontal width */}
@@ -105,6 +116,17 @@ const HeroSection = ({ selectedTheme }) => {
             </div>
           </Grid>
         </Grid>
+      </Container>
+      <Container>
+        <IconButton
+          aria-label="scroll down"
+          color="accent" // Change to "primary" if "accent" doesn't work
+          onClick={scrollToContent}
+          style={{ position: "relative", top: "50px", left: "50%" }}
+          id="downIndicator"
+        >
+          <KeyboardArrowDownIcon />
+        </IconButton>
       </Container>
     </div>
   );
