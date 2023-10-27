@@ -47,6 +47,12 @@ const AboutUs = ({ selectedTheme }) => {
             padding: "50px", // Add padding for spacing
           }}
         >
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <Typography variant="h3" component="h1">
             What is Pearl Hacks?
           </Typography>

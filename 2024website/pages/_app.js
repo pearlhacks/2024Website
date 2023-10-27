@@ -54,6 +54,7 @@ export default function MyApp(props) {
         build upon. */}
         <CssBaseline />
         <Navbar
+          paddingTop={"10px"}
           backgroundColor={"transparent"}
           toggleTheme={toggleTheme}
           selectedTheme={selectedTheme}

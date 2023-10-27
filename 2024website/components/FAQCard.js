@@ -40,6 +40,7 @@ const FAQCard = ({ question, answer, color }) => {
           }}
           size="small"
           sx={{ marginLeft: "auto" }}
+          color={color}
         >
           {expandIcon}
         </IconButton>
