@@ -16,6 +16,20 @@ const scrollToContent = () => {
 };
 
 const HeroSection = ({ selectedTheme }) => {
+  const fadeInAnimation = {
+    initial: {
+      opacity: 0,
+      x: -100, // Start from the left
+    },
+    animate: {
+      opacity: 1,
+      x: 0, // Move to its original position
+      transition: {
+        duration: 1, // Animation duration
+        ease: "easeOut", // Easing function
+      },
+    },
+  };
   return (
     <div
       style={{
@@ -23,8 +37,7 @@ const HeroSection = ({ selectedTheme }) => {
           selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
         })`,
         backgroundSize: "cover",
-        backgroundRepeat: "no-repeat", // Prevent background from repeating
-        backgroundPosition: "center center",
+        backgroundPosition: "center bottom",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -52,8 +65,6 @@ const HeroSection = ({ selectedTheme }) => {
                 margin: "0 auto",
                 width: "100%",
                 height: "auto",
-                animation:
-                  "flyInFromLeft 1s ease-in-out, bobble 0.5s alternate infinite, launch 1s ease-in-out",
               }}
               id="animate-right"
             />

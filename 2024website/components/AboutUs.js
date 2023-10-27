@@ -4,6 +4,10 @@ import Link from "next/link";
 import transitionSvgDark from "../public/images/Transition.svg";
 import transitionSvgLight from "../public/images/TransitionLight.svg";
 import graphicSvg from "../public/images/Secondary Graphic no bg.svg";
+import AccentLight1 from "../public/images/AccentLight1.svg";
+import AccentLight3 from "../public/images/AccentLight3.svg";
+import AccentDark1 from "../public/images/AccentDark1.svg";
+import AccentDark3 from "../public/images/AccentDark3.svg";
 import { SecondaryButton } from "./CustomButton";
 
 const AboutUs = ({ selectedTheme }) => {
@@ -31,6 +35,7 @@ const AboutUs = ({ selectedTheme }) => {
         backgroundColor: selectedTheme == "dark" ? "#317fb0" : "#67afd3",
         minHeight: "100vh",
         display: "flex",
+
         flexDirection: "column",
       }}
     >
@@ -38,8 +43,34 @@ const AboutUs = ({ selectedTheme }) => {
         style={{
           flex: 1,
           position: "relative",
+          paddingLeft: isWideWindow ? "100px" : "50px",
+          paddingRight: isWideWindow ? "100px" : "50px",
         }}
       >
+        <img
+          src={selectedTheme == "light" ? AccentLight1.src : AccentDark1.src} // Replace with the path to your left overlay SVG
+          alt="Left Overlay"
+          style={{
+            position: "absolute",
+            right: "0",
+            top: "-10vh",
+            zIndex: 2, // Adjust the z-index as needed
+            width: "auto", // Adjust the width as needed
+            height: "50vh", // Maintain aspect ratio
+          }}
+        />
+        <img
+          src={selectedTheme === "light" ? AccentLight3.src : AccentDark3.src} // Replace with the path to your right overlay SVG
+          alt="Right Overlay"
+          style={{
+            position: "absolute",
+            height: "60vh",
+            width: "auto",
+            left: "0",
+            bottom: "-20vh",
+            zIndex: 1, // Adjust the z-index as needed
+          }}
+        />
         <Container
           style={{
             position: "relative",
@@ -133,6 +164,7 @@ const AboutUs = ({ selectedTheme }) => {
           </Grid>
         </Container>
       </div>
+
       <div
         style={{
           backgroundImage:
