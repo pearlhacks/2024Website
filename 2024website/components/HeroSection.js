@@ -119,7 +119,7 @@ const HeroSection = ({ selectedTheme }) => {
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  Register now
+                  Join mailing list
                 </a>
               </HeroButton>
             </div>
