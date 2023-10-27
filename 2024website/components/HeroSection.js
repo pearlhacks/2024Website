@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Typography, IconButton, Grid } from "@mui/material";
 import mascotImage from "../public/images/PH2024_MainGraphic.svg";
-import backgroundDark from "../public/images/WebsiteBG_Updated.svg";
+import backgroundDark from "../public/images/Website_BG_Dark.svg";
 import backgroundLight from "../public/images/Website_BG_Light.svg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { HeroButton } from "./CustomButton";
@@ -16,22 +16,20 @@ const scrollToContent = () => {
 };
 
 const HeroSection = ({ selectedTheme }) => {
-  console.log(selectedTheme);
   return (
     <div
       style={{
-        background:
-          selectedTheme === "dark"
-            ? `url(${backgroundDark.src})`
-            : `url(${backgroundLight.src})`, // Set background image
-        backgroundSize: "cover", // Make the background cover the entire element
-        backgroundPositionX: "center", // Center the background horizontally
-        backgroundPositionY: "top", // Move the background image to the top
-        height: "120vh", // Set the height to 100% of the viewport height
+        background: `url(${
+          selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
+        })`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat", // Prevent background from repeating
+        backgroundPosition: "center center",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center", // Center content horizontally
-        justifyContent: "center", // Center content vertically
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       {/* Hero Content */}

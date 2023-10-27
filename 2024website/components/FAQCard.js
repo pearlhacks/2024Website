@@ -9,19 +9,19 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-const FAQCard = ({ question, answer }) => {
+const FAQCard = ({ question, answer, color }) => {
   const [expanded, setExpanded] = useState(false);
 
   const accordionStyle = {
     background: "transparent", // Set the Accordion background to transparent
-    color: "#1876bd", // Set the text color to #1876bd
+    color: color, // Set the text color to #1876bd
     boxShadow: "none", // Remove the shadow
   };
 
   const expandIcon = expanded ? (
-    <RemoveIcon color="inherit" />
+    <RemoveIcon color={color} />
   ) : (
-    <AddIcon color="inherit" />
+    <AddIcon color={color} />
   );
 
   return (

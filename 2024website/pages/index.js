@@ -22,6 +22,7 @@ export default function Home({ selectedTheme }) {
         </div>
 
         <Footer
+          selectedTheme={selectedTheme}
           backgroundColor={selectedTheme === "dark" ? "#42A5CC" : "#BBDFED"}
           zIndex={2}
         />

@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Typography, Grid } from "@mui/material";
-import aboutHeader from "../public/images/Header.svg";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Head from "next/head";
 import FAQCard from "../components/FAQCard"; // Import the FAQCard component
 import faqData from "../public/data/faq.json"; // Import the faq data
+import GenericLayout from "../components/GenericLayout";
 
 const FAQ = ({ toggleTheme, selectedTheme }) => {
   // Create an object to group FAQs by category
@@ -42,78 +39,43 @@ const FAQ = ({ toggleTheme, selectedTheme }) => {
 
   return (
     <div>
-      <Head>
-        <title>Pearl Hacks</title>
-        <link rel="icon" href="/images/logo.svg" />
-      </Head>
-      <div
-        style={{
-          backgroundColor: "#ffecac",
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          position: "relative",
-        }}
+      <GenericLayout
+        isWideWindow={isWideWindow}
+        selectedTheme={selectedTheme}
+        title="FAQs"
       >
-        <div
-          style={{
-            position: "relative",
-            zIndex: 1,
-          }}
-        >
-          <img
-            src={aboutHeader.src}
-            alt="About Header"
+        {/* Display FAQs by category */}
+        {Object.entries(groupedFaqs).map(([category, faqs]) => (
+          <div
+            key={category}
             style={{
-              width: "100%",
-              position: "relative",
-              top: 0,
-            }}
-          />
-          <Typography
-            variant={isWideWindow ? "h2" : "h3"}
-            style={{
-              position: "absolute",
-              top: "35%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              color: "#FFFFFF",
+              marginBottom: "50px",
             }}
           >
-            FAQs
-          </Typography>
-        </div>
-        <Container style={{ padding: isWideWindow ? "0 100px" : "0 50px" }}>
-          {/* Display FAQs by category */}
-          {Object.entries(groupedFaqs).map(([category, faqs]) => (
-            <div
-              key={category}
+            <Typography
+              variant="h3"
+              component="h2"
               style={{
-                marginBottom: "50px",
+                color: "#eda901",
+                marginBottom: "20px",
               }}
             >
-              <Typography
-                variant="h3"
-                component="h2"
-                style={{
-                  color: "#eda901",
-                  marginBottom: "20px",
-                }}
-              >
-                {category}
-              </Typography>
-              <Grid container spacing={2}>
-                {faqs.map((faq, index) => (
-                  <Grid item xs={12} sm={6} key={index}>
-                    <FAQCard question={faq.question} answer={faq.answer} />
-                  </Grid>
-                ))}
-              </Grid>
-            </div>
-          ))}
-        </Container>
-        <Footer />
-      </div>
+              {category}
+            </Typography>
+            <Grid container spacing={2}>
+              {faqs.map((faq, index) => (
+                <Grid item xs={12} sm={6} key={index}>
+                  <FAQCard
+                    question={faq.question}
+                    answer={faq.answer}
+                    color={selectedTheme == "light" ? "#1876bd" : "#F5EDC9"}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </div>
+        ))}
+      </GenericLayout>
     </div>
   );
 };

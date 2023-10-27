@@ -59,7 +59,7 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
         }}
       >
         <Container>
-          <Toolbar>
+          <Toolbar style={{ display: "flex", alignItems: "center" }}>
             <Grid
               container
               alignItems="center"
@@ -67,13 +67,17 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
               style={{ height: "100%" }}
             >
               {/* Left End: Logo, Pearl Hacks, and Social Media Icons */}
-              <Grid item xs={6} style={{ textAlign: "left" }}>
+              <Grid
+                item
+                xs={6}
+                style={{ textAlign: "left", alignItems: "center" }}
+              >
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
-                    paddingTop: "10px",
+                    alignContent: "center",
                   }}
                 >
                   <Typography
@@ -93,6 +97,7 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
                         style={{
                           height: "40px",
                           marginRight: "10px",
+                          marginTop: "10px",
                         }}
                       />
                     </Link>
@@ -107,6 +112,7 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
                             selectedTheme === "dark" ? "#ffecac" : "#1876bd",
                           fontFamily: "CaviarDreams",
                           fontWeight: "700",
+                          marginRight: "10px",
                         }}
                       >
                         Pearl Hacks
@@ -158,10 +164,10 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
                     >
                       Resources
                     </Link>
-                    <DarkModeToggle
+                    {/* <DarkModeToggle
                       toggleTheme={toggleTheme}
                       selectedTheme={selectedTheme}
-                    />
+                    /> */}
                   </>
                 ) : (
                   <IconButton

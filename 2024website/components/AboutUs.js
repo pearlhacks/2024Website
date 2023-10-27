@@ -43,7 +43,7 @@ const AboutUs = ({ selectedTheme }) => {
         <Container
           style={{
             position: "relative",
-            paddingTop: "150px", // Add padding for spacing
+            paddingTop: "200px", // Add padding for spacing
             padding: "50px", // Add padding for spacing
           }}
         >
@@ -135,11 +135,12 @@ const AboutUs = ({ selectedTheme }) => {
               : `url(${transitionSvgLight.src})`,
           backgroundRepeat: "no-repeat",
           display: "flex",
-          backgroundPosition: "center",
+          backgroundPositionX: "center",
           backgroundSize: "cover",
+          backgroundPositionY: "-20",
           width: "100%",
-          maxHeight: isWideWindow ? "800px" : "200px",
-          height: "500px",
+          maxHeight: "600px",
+          height: "100vh",
         }}
       ></div>
     </div>

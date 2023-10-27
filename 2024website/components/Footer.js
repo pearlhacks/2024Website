@@ -7,6 +7,7 @@ import {
   IconButton,
 } from "@mui/material";
 import footerSvg from "../public/images/Footer.svg";
+import darkFooter from "../public/images/FooterDark.svg";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"; // Changed to outline heart icon
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -16,7 +17,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { MailingListInput } from "./MailingListInput";
 import SocialMediaIcons from "./SocialMediaIcons";
 
-const Footer = ({ backgroundColor }) => {
+const Footer = ({ backgroundColor, selectedTheme }) => {
   const [isWideWindow, setIsWideWindow] = useState(true);
 
   useEffect(() => {
@@ -42,12 +43,16 @@ const Footer = ({ backgroundColor }) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
-        backgroundImage: `url(${footerSvg.src})`,
+        backgroundImage:
+          selectedTheme == "light"
+            ? `url(${footerSvg.src})`
+            : `url(${darkFooter.src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         maxWidth: "100%",
         backgroundColor: backgroundColor,
-        backgroundPosition: "center",
+        backgroundPositionX: "center",
+        backgroundPositionY: "-40",
         position: "relative",
         bottom: 0, // Stick to the bottom of the page
         minHeight: isWideWindow ? "900px" : "1200px", // Added min height
@@ -62,10 +67,16 @@ const Footer = ({ backgroundColor }) => {
           {/* Column 1: Keep up with us */}
 
           <Grid item xs={12} sm={4}>
-            <Typography variant="h4" color={"#F5EDC9"}>
+            <Typography
+              variant="h4"
+              color={selectedTheme == "light" ? "#F5EDC9" : "#eda901"}
+            >
               KEEP UP WITH US
             </Typography>
-            <Typography variant="p" color={"#366DA9"}>
+            <Typography
+              variant="p"
+              color={selectedTheme == "light" ? "#366DA9" : "#F5EDC9"}
+            >
               Join our mailing list!
             </Typography>
             <MailingListInput />
@@ -73,10 +84,16 @@ const Footer = ({ backgroundColor }) => {
 
           {/* Column 2: Administration */}
           <Grid item xs={12} sm={4}>
-            <Typography variant="h4" color={"#F5EDC9"}>
+            <Typography
+              variant="h4"
+              color={selectedTheme == "light" ? "#F5EDC9" : "#eda901"}
+            >
               ADMINISTRATION
             </Typography>
-            <Typography variant="p" color={"#366DA9"}>
+            <Typography
+              variant="p"
+              color={selectedTheme == "light" ? "#366DA9" : "#F5EDC9"}
+            >
               Pearl Hacks abides by the MLH Code of Conduct. For questions or
               feedback, contact us at{" "}
               <a
@@ -97,10 +114,16 @@ const Footer = ({ backgroundColor }) => {
 
           {/* Column 3: Inclusivity Statement */}
           <Grid item xs={12} sm={4}>
-            <Typography variant="h4" color={"#F5EDC9"}>
+            <Typography
+              variant="h4"
+              color={selectedTheme == "light" ? "#F5EDC9" : "#eda901"}
+            >
               INCLUSIVITY STATEMENT
             </Typography>
-            <Typography variant="p" color={"#366DA9"}>
+            <Typography
+              variant="p"
+              color={selectedTheme == "light" ? "#366DA9" : "#F5EDC9"}
+            >
               Pearl Hacks is an event designed to uplift and center women and
               gender non-conforming individuals in tech. We expect all of our
               mentors, volunteers, participants, directors, sponsors, judges,
@@ -110,7 +133,10 @@ const Footer = ({ backgroundColor }) => {
           </Grid>
         </Grid>
         {/* Horizontal Divider */}
-        <Divider sx={{ mt: 1, mb: 1 }} color="#1876bd" />
+        <Divider
+          sx={{ mt: 1, mb: 1 }}
+          color={selectedTheme == "light" ? "#366DA9" : "#F5EDC9"}
+        />
 
         {/* Made with love */}
         <Grid
@@ -119,21 +145,26 @@ const Footer = ({ backgroundColor }) => {
           justifyContent="space-between" // To place items at either end
         >
           <Grid item>
-            <Typography variant="body1" color="#366DA9">
+            <Typography
+              variant="body1"
+              color={selectedTheme == "light" ? "#366DA9" : "#F5EDC9"}
+            >
               {" "}
               {/* Changed text color */}
               Made with{" "}
               <FavoriteBorderIcon
                 sx={{
                   verticalAlign: "middle",
-                  color: "#366DA9", // Changed heart color
+                  color: selectedTheme == "light" ? "#366DA9" : "#F5EDC9", // Changed heart color
                 }}
               />{" "}
               by Pearl Hacks
             </Typography>
           </Grid>
           <Grid item>
-            <SocialMediaIcons color="#366DA9" />
+            <SocialMediaIcons
+              color={selectedTheme == "light" ? "#366DA9" : "#F5EDC9"}
+            />
           </Grid>
         </Grid>
       </Container>

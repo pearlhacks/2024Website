@@ -54,7 +54,6 @@ const ResourceCardWithText = ({ heading, text, links }) => {
   const linkStyles = {
     textDecoration: "none", // Remove underline
     color: "inherit", // Set default link color to black
-    display: "inline-block", // Make links inline-block elements
     transition: "color 0.3s", // Smooth color transition on hover
     "&:hover": {
       color: "#8ECCE2", // Change link color to yellow on hover
@@ -67,7 +66,7 @@ const ResourceCardWithText = ({ heading, text, links }) => {
         <Typography variant="h4" color="#1876bd">
           {heading}
         </Typography>
-        <ul style={{ listStyleType: "disc", marginLeft: "1rem" }}>
+        <ul style={{ marginLeft: "1rem" }}>
           {links.map((link, index) => (
             <li key={index}>
               <Link href={link.url} target="_blank" style={linkStyles}>
