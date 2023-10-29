@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Container, Typography, Grid } from "@mui/material";
+import React from "react";
+import { Typography, Grid } from "@mui/material";
 import FAQCard from "../components/FAQCard"; // Import the FAQCard component
 import faqData from "../public/data/faq.json"; // Import the faq data
 import GenericLayout from "../components/GenericLayout";
 
-const FAQ = ({ toggleTheme, selectedTheme }) => {
+const FAQ = ({ selectedTheme, isWideWindow }) => {
   // Create an object to group FAQs by category
   const groupedFaqs = faqData.reduce((acc, item) => {
     const category = item["Category"];
@@ -18,24 +18,6 @@ const FAQ = ({ toggleTheme, selectedTheme }) => {
     return acc;
   }, {});
 
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
 
   return (
     <div>

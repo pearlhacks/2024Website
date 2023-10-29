@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Container, Typography, Button, Grid } from "@mui/material";
+import React from "react";
+import { Container, Typography, Grid } from "@mui/material";
 import Link from "next/link";
 import transitionSvgDark from "../public/images/Transition.svg";
 import transitionSvgLight from "../public/images/TransitionLight.svg";
@@ -10,25 +10,7 @@ import AccentDark1 from "../public/images/AccentDark1.svg";
 import AccentDark3 from "../public/images/AccentDark3.svg";
 import { SecondaryButton } from "./CustomButton";
 
-const AboutUs = ({ selectedTheme }) => {
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 768); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
+const AboutUs = ({ selectedTheme, isWideWindow }) => {
   return (
     <div
       style={{

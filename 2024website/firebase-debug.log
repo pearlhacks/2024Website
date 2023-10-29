@@ -1,0 +1,44 @@
+[debug] [2023-10-29T14:50:41.924Z] ----------------------------------------------------------------------
+[debug] [2023-10-29T14:50:41.927Z] Command:       /usr/local/bin/firebase /Users/mac/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-10-29T14:50:41.927Z] CLI Version:   12.6.2
+[debug] [2023-10-29T14:50:41.927Z] Platform:      darwin
+[debug] [2023-10-29T14:50:41.928Z] Node Version:  v16.16.0
+[debug] [2023-10-29T14:50:41.933Z] Time:          Sun Oct 29 2023 10:50:41 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-10-29T14:50:41.933Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-29T14:50:42.010Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-29T14:50:42.010Z] > authorizing via signed-in user (marketing@pearlhacks.com)
+[debug] [2023-10-29T14:50:42.010Z] [iam] checking project pearlhacks-master for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-10-29T14:50:42.014Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pearlhacks-master:testIamPermissions [none]
+[debug] [2023-10-29T14:50:42.014Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pearlhacks-master:testIamPermissions x-goog-quota-user=projects/pearlhacks-master
+[debug] [2023-10-29T14:50:42.014Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pearlhacks-master:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-29T14:50:44.975Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pearlhacks-master:testIamPermissions 200
+[debug] [2023-10-29T14:50:44.975Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pearlhacks-master:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-29T14:50:44.976Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pearlhacks-master [none]
+[debug] [2023-10-29T14:50:45.600Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pearlhacks-master 200
+[debug] [2023-10-29T14:50:45.601Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pearlhacks-master {"projectId":"pearlhacks-master","projectNumber":"114531028117","displayName":"pearlhacks-master","name":"projects/pearlhacks-master","resources":{"hostingSite":"pearlhacks-master","realtimeDatabaseInstance":"pearlhacks-master","storageBucket":"pearlhacks-master.appspot.com","locationId":"us-east1"},"state":"ACTIVE","etag":"1_e399a3b4-cb59-4bfa-84c5-2dd8b4b31936"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] unhandledRejection ReferenceError: Headers is not defined
+    at /Users/mac/Documents/GitHub/2024Website/2024website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:14:8846
+    at /Users/mac/Documents/GitHub/2024Website/2024website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:14:41308
+    at Object.<anonymous> (/Users/mac/Documents/GitHub/2024Website/2024website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:14:41329)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.require (pkg/prelude/bootstrap.js:1851:31)
+
+[debug] [2023-10-29T14:50:56.504Z] Error: ENOENT: no such file or directory, open '/Users/mac/Documents/GitHub/2024Website/2024website/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

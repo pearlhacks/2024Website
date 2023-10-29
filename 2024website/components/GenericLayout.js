@@ -1,29 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Typography } from "@mui/material";
 import aboutHeader from "../public/images/Header.svg";
 import Footer from "../components/Footer";
 import darkHeader from "../public/images/HeaderDark.svg";
 import Head from "next/head";
 
-const GenericLayout = ({ selectedTheme, title, children }) => {
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
+const GenericLayout = ({ selectedTheme, title, children, isWideWindow }) => {
+  
   return (
     <div>
       <Head>

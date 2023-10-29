@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Container, Typography, IconButton, Grid } from "@mui/material";
+import React from "react";
+import { Container, Typography, Grid } from "@mui/material";
 import mascotImage from "../public/images/PH2024_MainGraphic.svg";
 import backgroundDark from "../public/images/Website_BG_Dark.svg";
 import backgroundLight from "../public/images/Website_BG_Light.svg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { HeroButton } from "./CustomButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import "../styles/animation.module.css";
 import { motion } from "framer-motion";
 
 
@@ -18,20 +17,7 @@ const scrollToContent = () => {
 };
 
 const HeroSection = ({ selectedTheme }) => {
-  const fadeInAnimation = {
-    initial: {
-      opacity: 0,
-      x: -100, // Start from the left
-    },
-    animate: {
-      opacity: 1,
-      x: 0, // Move to its original position
-      transition: {
-        duration: 1, // Animation duration
-        ease: "easeOut", // Easing function
-      },
-    },
-  };
+
   return (
     <div
       style={{
@@ -39,7 +25,7 @@ const HeroSection = ({ selectedTheme }) => {
           selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
         })`,
         backgroundSize: "cover",
-        backgroundPosition: "center center",
+        backgroundPosition: "center bottom",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -66,7 +52,7 @@ const HeroSection = ({ selectedTheme }) => {
               style={{
                 display: "block",
                 margin: "0 auto",
-                width: "90%",
+                width: "100%",
                 height: "auto",
               }}
               id="animate-right"

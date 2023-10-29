@@ -9,33 +9,10 @@ import {
 import footerSvg from "../public/images/Footer.svg";
 import darkFooter from "../public/images/FooterDark.svg";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"; // Changed to outline heart icon
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import EmailIcon from "@mui/icons-material/Email";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import { MailingListInput } from "./MailingListInput";
 import SocialMediaIcons from "./SocialMediaIcons";
 
-const Footer = ({ backgroundColor, selectedTheme }) => {
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
+const Footer = ({ backgroundColor, selectedTheme, isWideWindow }) => {
   return (
     <div
       fullWidth

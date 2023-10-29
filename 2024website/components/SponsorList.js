@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import sponsorsData from "../public/data/sponsors.json";
 
-const SponsorBoard = () => {
+const SponsorBoard = ({ isWideWindow }) => {
   const handleSponsorClick = (sponsorUrl) => {
     window.open(sponsorUrl, "_blank"); // Open the sponsor's site in a new tab
   };
@@ -22,24 +20,7 @@ const SponsorBoard = () => {
 
   // Order tiers as desired
   const tierOrder = ["Pearl", "Gold", "Silver", "Custom"];
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 768); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
+  
   return (
     <Paper
       elevation={0} // Remove the shadow
@@ -87,7 +68,7 @@ const SponsorBoard = () => {
                         maxHeight:
                           tier === "Pearl"
                             ? isWideWindow
-                              ? "150px"
+                              ? "120px"
                               : "50px"
                             : tier === "Gold"
                             ? isWideWindow

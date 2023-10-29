@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Container, Typography, Button } from "@mui/material";
+import React from "react";
+import {Typography} from "@mui/material";
 import leftImage from "../public/images/Photo1.JPG"; // Add your left image path
 import rightImage from "../public/images/Photo2.JPG"; // Add your right image path
 import { PrimaryButton } from "../components/CustomButton";
 import GenericLayout from "../components/GenericLayout";
 
-const About = ({ toggleTheme, selectedTheme }) => {
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
+const About = ({ selectedTheme, isWideWindow }) => {
   return (
     <div>
       <GenericLayout

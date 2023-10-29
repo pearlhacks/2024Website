@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Typography, Link } from "@mui/material";
 import SponsorList from "./SponsorList";
 import AccentLight2 from "../public/images/AccentLight2.svg";
@@ -6,25 +6,8 @@ import AccentDark2 from "../public/images/AccentDark2.svg";
 import AccentLight4 from "../public/images/AccentLight4.svg";
 import AccentDark4 from "../public/images/AccentDark4.svg";
 
-const Sponsor = ({ selectedTheme }) => {
-  const [isWideWindow, setIsWideWindow] = useState(true);
+const Sponsor = ({ selectedTheme, isWideWindow }) => {
 
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 768); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
   return (
     <div
       style={{
@@ -97,7 +80,7 @@ const Sponsor = ({ selectedTheme }) => {
           <Typography variant="h3" align="center" mt={5} mb={5}>
             Our 2023 Sponsors
           </Typography>
-          <SponsorList style={{ zIndex: 3 }} />
+          <SponsorList isWideWindow={isWideWindow} style={{ zIndex: 3 }} />
         </section>
       </Container>
     </div>

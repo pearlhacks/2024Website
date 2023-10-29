@@ -43,6 +43,25 @@ export default function MyApp(props) {
     setActiveTheme(getActiveTheme(selectedTheme));
   }, [selectedTheme]);
 
+  const [isWideWindow, setIsWideWindow] = useState(true);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
+    };
+
+    // Add an event listener to check the window width
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Initial check
+    checkWindowWidth();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []);
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -63,6 +82,7 @@ export default function MyApp(props) {
           {...pageProps}
           toggleTheme={toggleTheme}
           selectedTheme={selectedTheme}
+          isWideWindow={isWideWindow}
         />
       </ThemeProvider>
     </CacheProvider>

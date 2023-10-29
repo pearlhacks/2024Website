@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import transitionSvgDark from '../public/images/HeroTransition_Dark.svg';
 import transitionSvgLight from '../public/images/HeroTransition_Light.svg';
 
-export default function Home({ selectedTheme }) {
+export default function Home({ selectedTheme, isWideWindow }) {
   return (
     <div>
       <Head>
@@ -16,10 +16,11 @@ export default function Home({ selectedTheme }) {
 
       <main>
         <div>
-          <HeroSection selectedTheme={selectedTheme} />
-          <AboutUs selectedTheme={selectedTheme} />
-          <Sponsor selectedTheme={selectedTheme} />
-          <img
+          <HeroSection isWideWindow={isWideWindow} selectedTheme={selectedTheme} />
+          <AboutUs isWideWindow={isWideWindow} selectedTheme={selectedTheme} />
+          <Sponsor isWideWindow={isWideWindow} selectedTheme={selectedTheme} />
+          {
+            isWideWindow ? <img
             src={selectedTheme === "light" ? transitionSvgDark.src : transitionSvgLight.src}
             alt="Hero Transition"
             style={{
@@ -29,13 +30,16 @@ export default function Home({ selectedTheme }) {
               width: "100%",
               zIndex: 1,
             }}
-          />
+          /> : null
+          }
+          
         </div>
 
         <Footer
           selectedTheme={"light"}
           backgroundColor={selectedTheme === "dark" ? "#42A5CC" : "#b2e0ef"}
           zIndex={1}
+          isWideWindow={isWideWindow}
         />
       </main>
     </div>

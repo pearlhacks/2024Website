@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Container, Typography, Grid } from "@mui/material";
+import React from "react";
+import { Typography, Grid } from "@mui/material";
 import {
   ResourceCardWithInfo,
   ResourceCardWithText,
@@ -7,7 +7,7 @@ import {
 import resourcesData from "../public/data/resources.json"; // Import the resources data
 import GenericLayout from "../components/GenericLayout";
 
-const Resources = ({ toggleTheme, selectedTheme }) => {
+const Resources = ({ selectedTheme, isWideWindow }) => {
   const beginnerResources = resourcesData["Beginner Hackers"];
   const generalHackingResources = resourcesData["General Hacking"];
   const nonTraditionalResources =
@@ -15,24 +15,6 @@ const Resources = ({ toggleTheme, selectedTheme }) => {
   const mentalHealthResources = resourcesData["Social & Mental Resources"];
   const pastProjectsResources = resourcesData["Pearl Hacks Projects"];
 
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
   return (
     <div>
       <GenericLayout

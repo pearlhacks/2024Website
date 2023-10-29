@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Container,
@@ -18,26 +18,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import SocialMediaIcons from "./SocialMediaIcons";
 import DarkModeToggle from "./DarkModeToggle";
 
-const Navbar = ({ backgroundColor, toggleTheme, selectedTheme }) => {
+const Navbar = ({ backgroundColor, toggleTheme, selectedTheme, isWideWindow }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isWideWindow, setIsWideWindow] = useState(true);
-
-  useEffect(() => {
-    const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 768); // Adjust the breakpoint as needed
-    };
-
-    // Add an event listener to check the window width
-    window.addEventListener("resize", checkWindowWidth);
-
-    // Initial check
-    checkWindowWidth();
-
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", checkWindowWidth);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
