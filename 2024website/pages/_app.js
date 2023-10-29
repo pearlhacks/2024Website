@@ -47,7 +47,7 @@ export default function MyApp(props) {
 
   useEffect(() => {
     const checkWindowWidth = () => {
-      setIsWideWindow(window.innerWidth >= 500); // Adjust the breakpoint as needed
+      setIsWideWindow(window.innerWidth >= 600); // Adjust the breakpoint as needed
     };
 
     // Add an event listener to check the window width

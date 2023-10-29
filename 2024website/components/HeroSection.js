@@ -16,7 +16,7 @@ const scrollToContent = () => {
   });
 };
 
-const HeroSection = ({ selectedTheme }) => {
+const HeroSection = ({ selectedTheme, isWideWindow }) => {
 
   return (
     <div
@@ -81,8 +81,9 @@ const HeroSection = ({ selectedTheme }) => {
 
               <Typography
                 variant="h1"
+                
                 component="p"
-                style={{ marginBottom: "5px" }}
+                style={{ marginBottom: "5px", color: isWideWindow ? "#ffecac" : "#f3c35d" }}
               >
                 PEARL HACKS
               </Typography>

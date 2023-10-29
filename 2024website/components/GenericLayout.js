@@ -62,6 +62,7 @@ const GenericLayout = ({ selectedTheme, title, children, isWideWindow }) => {
       <Footer
         backgroundColor={selectedTheme == "light" ? "#ffecac" : "#0D4968"}
         selectedTheme={selectedTheme}
+        isWideWindow={isWideWindow}
       />
     </div>
   );
