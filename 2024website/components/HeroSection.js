@@ -7,6 +7,8 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { HeroButton } from "./CustomButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "../styles/animation.module.css";
+import { motion } from "framer-motion";
+
 
 const scrollToContent = () => {
   window.scrollTo({
@@ -37,7 +39,7 @@ const HeroSection = ({ selectedTheme }) => {
           selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
         })`,
         backgroundSize: "cover",
-        backgroundPosition: "center bottom",
+        backgroundPosition: "center center",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -47,7 +49,7 @@ const HeroSection = ({ selectedTheme }) => {
     >
       {/* Hero Content */}
       <Container
-        style={{ display: "flex", justifyContent: "center", padding: "50px" }}
+        style={{ display: "flex", justifyContent: "center", padding: "50px", zIndex:2 }}
       >
         <Grid container spacing={4}>
           <Grid
@@ -57,13 +59,14 @@ const HeroSection = ({ selectedTheme }) => {
             style={{ display: "flex", alignItems: "center" }}
           >
             {/* Mascot Image */}
+            
             <img
               src={mascotImage.src}
               alt="Mascot"
               style={{
                 display: "block",
                 margin: "0 auto",
-                width: "100%",
+                width: "90%",
                 height: "auto",
               }}
               id="animate-right"
@@ -126,7 +129,7 @@ const HeroSection = ({ selectedTheme }) => {
           </Grid>
         </Grid>
       </Container>
-      <Container>
+      <Container style={{zIndex: 2,}}>
         <IconButton
           aria-label="scroll down"
           color="accent" // Change to "primary" if "accent" doesn't work
@@ -137,6 +140,7 @@ const HeroSection = ({ selectedTheme }) => {
           <KeyboardArrowDownIcon />
         </IconButton>
       </Container>
+      
     </div>
   );
 };

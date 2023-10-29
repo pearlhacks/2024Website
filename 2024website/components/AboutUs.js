@@ -47,16 +47,17 @@ const AboutUs = ({ selectedTheme }) => {
           paddingRight: isWideWindow ? "100px" : "50px",
         }}
       >
-        <img
+        {isWideWindow ? 
+        (<div><img
           src={selectedTheme == "light" ? AccentLight1.src : AccentDark1.src} // Replace with the path to your left overlay SVG
           alt="Left Overlay"
           style={{
             position: "absolute",
             right: "0",
-            top: "-10vh",
+            top: "0",
             zIndex: 2, // Adjust the z-index as needed
             width: "auto", // Adjust the width as needed
-            height: "50vh", // Maintain aspect ratio
+            height: "30vh", // Maintain aspect ratio
           }}
         />
         <img
@@ -70,7 +71,7 @@ const AboutUs = ({ selectedTheme }) => {
             bottom: "-20vh",
             zIndex: 1, // Adjust the z-index as needed
           }}
-        />
+        /></div>) : null}
         <Container
           style={{
             position: "relative",

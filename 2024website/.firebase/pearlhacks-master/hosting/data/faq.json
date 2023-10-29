@@ -1,0 +1,72 @@
+[
+    {
+      "Question": "What is a hackathon?",
+      "Answer": "A hackathon is a team event where you make, or hack together a coding project within 24 hours. Teams demo their projects at the end of the event for the chance to win amazing prizes. Hackathons are a great place to learn about a particular technology you might be interested in, meet other people who are interested in tech, and also exercise your creativity and curiosity.",
+      "Category": "Beginner's FAQs"
+    },
+    {
+      "Question": "What about my team?",
+      "Answer": "You can create your team with whoever you like, with up to four people. To keep the judgement process fair, no exceptions will be made for teams of greater than four. You can also choose to hack by yourself if you wish.",
+      "Category": "Beginner's FAQs"
+    },
+    {
+      "Question": "What if I can't code?",
+      "Answer": "Come anyways! We have workshops dedicated to beginner technologists on the day of the event, and every year many of our attendees are first-time hackers who have limited coding experience. Even if you don't want to create a project, a hackathon is a great place to learn about new things and network.",
+      "Category": "Beginner's FAQs"
+    },
+    {
+      "Question": "Can I attend?",
+      "Answer": "As long as you identify as a woman or non-binary and will be 18 at the start of the hackathon, you are more than welcome to attend! Professionals are encouraged to attend as mentors, regardless of gender, and men are also welcome to attend as volunteers.",
+      "Category": "General FAQs"
+    },
+    {
+      "Question": "How do I get \"accepted\" for the hackathon?",
+      "Answer": "Anyone who identifies as a woman or non-binary is invited to participate in Pearl Hacks. Fill out our registration form once it is open and we will notify you of your acceptance as the event approaches.",
+      "Category": "General FAQs"
+    },
+    {
+      "Question": "Can I use old code?",
+      "Answer": "All work on a project should be done at the hackathon. Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed. Adding new features to existing projects is allowed. Judges will only consider new functionality introduced or new features added during the hackathon in determining the winners.",
+      "Category": "General FAQs"
+    },
+    {
+      "Question": "How do I get swag and prizes?",
+      "Answer": "Details coming soon.",
+      "Category": "General FAQs"
+    },
+    {
+      "Question": "How do I get meal reimbursement?",
+      "Answer": "Details coming soon.",
+      "Category": "General FAQs"
+    },
+    {
+      "Question": "Attendee Requirement",
+      "Answer": "In order to attend Pearl Hacks, you must have a valid university ID, or have graduated within the last 12 months. You must also be a woman or non-binary student or new grad.",
+      "Category": "Guidelines"
+    },
+    {
+      "Question": "Late Signup",
+      "Answer": "If you missed the normal registration deadline, you may still sign up for Pearl Hacks at the event itself. Please note that we cannot guarantee food or swag for late registrants.",
+      "Category": "Guidelines"
+    },
+    {
+      "Question": "Code Requirement",
+      "Answer": "All code presented for judging must be written during the event. Contestants that violate this rule will be disqualified. The easiest way to avoid doing this is by trying something you've never done before.",
+      "Category": "Guidelines"
+    },
+    {
+      "Question": "MLH Privacy Policy",
+      "Answer": "All Pearl Hacks attendees must agree to the MLH Privacy Policy.",
+      "Category": "Guidelines"
+    },
+    {
+      "Question": "MLH Code of Conduct",
+      "Answer": "In addition to everything listed on this page, Pearl Hacks also requires all attendees to abide by the MLH Code of Conduct.",
+      "Category": "Guidelines"
+    },
+    {
+      "Question": "Inclusivity Expectations",
+      "Answer": "Pearl Hacks is an event designed to uplift and center women and gender non-conforming students. We expect all of our mentors, volunteers, participants, directors, sponsors, judges, and visitors to be respectful of our participants' gender identities and expressions.",
+      "Category": "Guidelines"
+    }
+  ]

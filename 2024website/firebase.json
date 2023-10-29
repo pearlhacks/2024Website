@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "source": "2024website",
+    "source": ".",
     "ignore": [
       "firebase.json",
       "**/.*",

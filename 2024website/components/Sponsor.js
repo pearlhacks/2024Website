@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Typography, Link } from "@mui/material";
 import SponsorList from "./SponsorList";
 import AccentLight2 from "../public/images/AccentLight2.svg";
@@ -7,6 +7,24 @@ import AccentLight4 from "../public/images/AccentLight4.svg";
 import AccentDark4 from "../public/images/AccentDark4.svg";
 
 const Sponsor = ({ selectedTheme }) => {
+  const [isWideWindow, setIsWideWindow] = useState(true);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsWideWindow(window.innerWidth >= 768); // Adjust the breakpoint as needed
+    };
+
+    // Add an event listener to check the window width
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Initial check
+    checkWindowWidth();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []);
   return (
     <div
       style={{
@@ -14,16 +32,18 @@ const Sponsor = ({ selectedTheme }) => {
         minHeight: "100vh",
       }}
     >
-      <img
+      {isWideWindow ? (
+        <div>
+          <img
         src={selectedTheme == "light" ? AccentLight4.src : AccentDark4.src} // Replace with the path to your left overlay SVG
         alt="Left Overlay"
         style={{
           position: "absolute",
           right: "0",
-          top: "240vh", // Adjust the top value to move it down
+          top: "280vh", // Adjust the top value to move it down
           zIndex: 1, // Adjust the z-index as needed
           width: "auto", // Adjust the width as needed
-          height: "100vh", // Maintain aspect ratio
+          height: "60vh", // Maintain aspect ratio
         }}
       />
       <img
@@ -31,13 +51,16 @@ const Sponsor = ({ selectedTheme }) => {
         alt="Right Overlay"
         style={{
           position: "absolute",
-          height: "100vh",
+          height: "80vh",
           width: "auto",
-
+          top: "300vh", // Adjust the top value to move it down
           left: "0",
           zIndex: 1, // Adjust the z-index as needed
         }}
       />
+        </div>
+      ) : null}
+      
       <Container
         style={{
           position: "relative",
