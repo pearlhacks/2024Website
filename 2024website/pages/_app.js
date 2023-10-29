@@ -77,6 +77,7 @@ export default function MyApp(props) {
           backgroundColor={"transparent"}
           toggleTheme={toggleTheme}
           selectedTheme={selectedTheme}
+          isWideWindow={isWideWindow}
         />
         <Component
           {...pageProps}

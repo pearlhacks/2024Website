@@ -146,10 +146,10 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme, isWideWindow }) =
                     >
                       Resources
                     </Link>
-                    <DarkModeToggle
+                    {/* <DarkModeToggle
                       toggleTheme={toggleTheme}
                       selectedTheme={selectedTheme}
-                    />
+                    /> */}
                   </>
                 ) : (
                   <IconButton
