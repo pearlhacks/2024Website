@@ -129,7 +129,7 @@ const HeroSection = ({ selectedTheme }) => {
           </Grid>
         </Grid>
       </Container>
-      <Container style={{zIndex: 2,}}>
+      {/* <Container style={{zIndex: 2,}}>
         <IconButton
           aria-label="scroll down"
           color="accent" // Change to "primary" if "accent" doesn't work
@@ -139,7 +139,7 @@ const HeroSection = ({ selectedTheme }) => {
         >
           <KeyboardArrowDownIcon />
         </IconButton>
-      </Container>
+      </Container> */}
       
     </div>
   );
