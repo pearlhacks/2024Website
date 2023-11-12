@@ -52,11 +52,9 @@ const ResourceCardWithInfo = ({ icon, title, link }) => {
 
 const ResourceCardWithText = ({ heading, text, links }) => {
   const linkStyles = {
-    textDecoration: "none", // Remove underline
     color: "inherit", // Set default link color to black
-    transition: "color 0.3s", // Smooth color transition on hover
     "&:hover": {
-      color: "#8ECCE2", // Change link color to yellow on hover
+      color: "#1876bd", // Change link color on hover
     },
   };
 

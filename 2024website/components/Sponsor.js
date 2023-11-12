@@ -10,47 +10,24 @@ const Sponsor = ({ selectedTheme, isWideWindow }) => {
 
   return (
     <div
-      style={{
-        backgroundColor: selectedTheme === "dark" ? "#42A5CC" : "#b2e0ef",
-        minHeight: "100vh",
-      }}
+      style={{ marginTop: '-15vh'}}
     >
-      {isWideWindow ? (
-        <div>
-          <img
-        src={selectedTheme == "light" ? AccentLight4.src : AccentDark4.src} // Replace with the path to your left overlay SVG
-        alt="Left Overlay"
-        style={{
-          position: "absolute",
-          right: "0",
-          top: "280vh", // Adjust the top value to move it down
-          zIndex: 1, // Adjust the z-index as needed
-          width: "auto", // Adjust the width as needed
-          height: "60vh", // Maintain aspect ratio
-        }}
-      />
-      <img
-        src={selectedTheme === "light" ? AccentLight2.src : AccentDark2.src} // Replace with the path to your right overlay SVG
-        alt="Right Overlay"
-        style={{
-          position: "absolute",
-          height: "80vh",
-          width: "auto",
-          top: "300vh", // Adjust the top value to move it down
-          left: "0",
-          zIndex: 1, // Adjust the z-index as needed
-        }}
-      />
-        </div>
-      ) : null}
       
       <Container
         style={{
           position: "relative",
-          padding: "50px", // Add padding for spacing
+          paddingLeft: "50px", // Add padding for spacing
+          paddingRight: "50px", // Add padding for spacing
           zIndex: 2,
         }}
       >
+        <section className="container pb-5 pt-3 rounded" id="sponsorlogos">
+          {/* Add your sponsor board here */}
+          <Typography variant="h3" align="center" mt={5} mb={5}>
+            Our 2023 Sponsors
+          </Typography>
+          <SponsorList isWideWindow={isWideWindow} style={{ zIndex: 3 }} />
+        </section>
         <Typography
           body1="p"
           color={selectedTheme === "dark" ? "#F5EDC9" : "#1876bd"}
@@ -75,13 +52,9 @@ const Sponsor = ({ selectedTheme, isWideWindow }) => {
           .
         </Typography>
 
-        <section className="container pb-5 pt-3 rounded" id="sponsorlogos">
-          {/* Add your sponsor board here */}
-          <Typography variant="h3" align="center" mt={5} mb={5}>
-            Our 2023 Sponsors
-          </Typography>
-          <SponsorList isWideWindow={isWideWindow} style={{ zIndex: 3 }} />
-        </section>
+        
+        
+        
       </Container>
     </div>
   );

@@ -96,7 +96,7 @@ const AboutUs = ({ selectedTheme, isWideWindow }) => {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="https://pearlhacks2023.devpost.com/" passHref>
+              <Link underline='none' href="https://pearlhacks2023.devpost.com/" passHref>
                 <SecondaryButton>Show Past Projects</SecondaryButton>
               </Link>
             </Grid>
@@ -139,7 +139,7 @@ const AboutUs = ({ selectedTheme, isWideWindow }) => {
                   Come anyway! We have workshops, mentors, and fun events for
                   all skill levels.
                 </Typography>
-                <Link href="/faq" passHref>
+                <Link underline='none' href="/faq" passHref>
                   <SecondaryButton>More FAQs</SecondaryButton>
                 </Link>
               </div>

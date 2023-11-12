@@ -194,21 +194,21 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme, isWideWindow }) =
           </IconButton>
           <List onClick={closeMenu}>
             <ListItem button>
-              <Link href="/about" color="inherit" underline="none">
+              <Link overlay href="/about" color="inherit" underline="none">
                 {" "}
                 {/* Remove underline */}
                 <ListItemText primary="About Us" />
               </Link>
             </ListItem>
             <ListItem button>
-              <Link href="/faq" color="inherit" underline="none">
+              <Link overlay href="/faq" color="inherit" underline="none">
                 {" "}
                 {/* Remove underline */}
                 <ListItemText primary="FAQ" />
               </Link>
             </ListItem>
             <ListItem button>
-              <Link href="/resources" color="inherit" underline="none">
+              <Link overlay href="/resources" color="inherit" underline="none">
                 {" "}
                 {/* Remove underline */}
                 <ListItemText primary="Resources" />

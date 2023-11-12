@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { alpha } from "@mui/material";
 
 const FAQCard = ({ question, answer, color }) => {
   const [expanded, setExpanded] = useState(false);
@@ -19,9 +20,9 @@ const FAQCard = ({ question, answer, color }) => {
   };
 
   const expandIcon = expanded ? (
-    <RemoveIcon color={color} />
+    <RemoveIcon sx={{color:alpha(color,0.6)}} />
   ) : (
-    <AddIcon color={color} />
+    <AddIcon sx={{color:alpha(color,0.6)}} />
   );
 
   return (

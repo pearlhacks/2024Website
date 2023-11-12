@@ -21,9 +21,8 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
   return (
     <div
       style={{
-        background: `url(${
-          selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
-        })`,
+        background: `url(${selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
+          })`,
         backgroundSize: "cover",
         backgroundPosition: "center bottom",
         height: "100vh",
@@ -35,7 +34,7 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
     >
       {/* Hero Content */}
       <Container
-        style={{ display: "flex", justifyContent: "center", padding: "50px", zIndex:2 }}
+        style={{ display: "flex", justifyContent: "center", padding: "50px", zIndex: 2 }}
       >
         <Grid container spacing={4}>
           <Grid
@@ -45,8 +44,8 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
             style={{ display: "flex", alignItems: "center" }}
           >
             {/* Mascot Image */}
-            
-            <img
+
+            {/* <img
               src={mascotImage.src}
               alt="Mascot"
               style={{
@@ -55,6 +54,20 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
                 width: "100%",
                 height: "auto",
               }}
+              id="animate-right"
+            /> */}
+            <motion.img
+              src={mascotImage.src}
+              alt="Mascot"
+              style={{
+                display: "block",
+                margin: "0 auto",
+                width: "100%",
+                height: "auto",
+              }}
+              initial={{ opacity: 0, x: -100 }} // start from the left and faded out
+              animate={{ opacity: 1, x: 0 }} // animate to fully visible and in position
+              transition={{ duration: 1 }} // adjust duration as needed
               id="animate-right"
             />
           </Grid>
@@ -81,7 +94,7 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
 
               <Typography
                 variant="h1"
-                
+
                 component="p"
                 style={{ marginBottom: "5px", color: isWideWindow ? "#ffecac" : "#f3c35d" }}
               >
@@ -127,7 +140,7 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
           <KeyboardArrowDownIcon />
         </IconButton>
       </Container> */}
-      
+
     </div>
   );
 };

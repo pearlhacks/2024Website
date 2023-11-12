@@ -1,8 +1,7 @@
 import React from "react";
 import { IconButton } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedinIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -21,13 +20,13 @@ const SocialMediaIcons = ({ color }) => {
       <IconButton
         color="inherit"
         onClick={() =>
-          window.open("https://facebook.com/pearlhackathon", "_blank")
+          window.open("https://www.linkedin.com/company/pearl-hacks", "_blank")
         }
         style={iconStyle}
         onMouseEnter={(e) => (e.target.style = iconHoverStyle)}
         onMouseLeave={(e) => (e.target.style = iconStyle)}
       >
-        <FacebookIcon />
+        <LinkedinIcon />
       </IconButton>
       <IconButton
         color="inherit"
