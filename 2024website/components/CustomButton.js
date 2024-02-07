@@ -5,6 +5,7 @@ import React from "react";
 // Define a custom styled button
 const HeroButton = styled(Button)(({ theme }) => ({
   borderRadius: "80px",
+  textDecoration: "none",
   backgroundColor: theme === "dark" ? "#1876BD" : "#FFECAC",
   color: theme == "dark" ? "#FFECAC" : "#1876BD",
   border: theme == "dark" ? "2px solid #96D0FF" : "2px solid #1876BD",
@@ -23,6 +24,7 @@ const HeroButton = styled(Button)(({ theme }) => ({
 const PrimaryButton = styled(Button)(({ theme }) => ({
   borderRadius: "80px",
   backgroundColor: "#eda901",
+  textDecoration: "none",
   color: "#F5EDC9",
   fontFamily: "CaviarDreams",
   fontWeight: 700,
@@ -39,6 +41,7 @@ const SecondaryButton = styled(Button)(({ theme }) => ({
   borderRadius: "80px",
   backgroundColor: "#F5EDC9",
   color: "#1876bd",
+  textDecoration: "none",
   fontFamily: "CaviarDreams",
   fontWeight: 700,
   border: "2px solid #1876BD",

@@ -33,7 +33,7 @@ export function MailingListInput() {
 
   return (
     <form
-      action="https://pearlhacks.us17.list-manage.com/subscribe?u=211594c9660fc6331ed123271&id=ebe9408826"
+      action="http://eepurl.com/iBAVlw"
       method="POST"
       style={containerStyle}
     >

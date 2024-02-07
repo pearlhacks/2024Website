@@ -1,0 +1,282 @@
+[
+  {
+    "Event": "CS Dept Resume Review",
+    "Type": "Pre-event",
+    "Start Time": "5:00 PM",
+    "End Time": "6:00 PM",
+    "Day": "Thursday, Feb. 15th",
+    "Location": "SN011"
+  },
+  {
+    "Event": "Tie Dye",
+    "Type": "Pre-event",
+    "Start Time": "5:00 PM",
+    "End Time": "6:00 PM",
+    "Day": "Friday, Feb. 16th",
+    "Location": "FB007"
+  },
+  {
+    "Event": "Pre-Hack 101",
+    "Type": "Pre-event",
+    "Start Time": "5:00 PM",
+    "End Time": "6:00 PM",
+    "Day": "Monday, Feb. 19th",
+    "Location": "SN014"
+  },
+  {
+    "Event": "RTC Event",
+    "Type": "Pre-event",
+    "Start Time": "7:00 PM",
+    "End Time": "8:00 PM",
+    "Day": "Tuesday, Feb. 20th",
+    "Location": "SN014"
+  },
+  {
+    "Event": "Python Workshop",
+    "Type": "Pre-event",
+    "Start Time": "5:00 PM",
+    "End Time": "6:00 PM",
+    "Day": "Wednesday, Feb. 21st",
+    "Location": "FB141"
+  },
+  {
+    "Event": "Java Workshop",
+    "Type": "Pre-event",
+    "Start Time": "5:00 PM",
+    "End Time": "6:00 PM",
+    "Day": "Thursday, Feb. 22nd",
+    "Location": "FB141"
+  },
+  {
+    "Event": "Carpool Students Arrive",
+    "Type": "Day-of",
+    "Start Time": "7:00 PM",
+    "End Time": "9:00 PM",
+    "Day": "Friday, Feb. 23th",
+    "Location": "Bell Tower/Cobb"
+  },
+  {
+    "Event": "Dinner",
+    "Type": "Day-of",
+    "Start Time": "8:00 PM",
+    "End Time": "9:00 PM",
+    "Day": "Friday, Feb. 23th",
+    "Location": "Sitterson Lobby"
+  },
+  {
+    "Event": "Registration",
+    "Type": "Day-of",
+    "Start Time": "9:00 AM",
+    "End Time": "10:00 AM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall Lobby"
+  },
+  {
+    "Event": "Breakfast",
+    "Type": "Day-of",
+    "Start Time": "9:00 AM",
+    "End Time": "10:30 AM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Opening Ceremony",
+    "Type": "Day-of",
+    "Start Time": "10:00 AM",
+    "End Time": "11:00 AM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": ""
+  },
+  {
+    "Event": "Hacking Begins",
+    "Type": "Day-of",
+    "Start Time": "11:00 AM",
+    "End Time": "11:00 AM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Everywhere"
+  },
+  {
+    "Event": "Hack 101 (part 2)",
+    "Type": "Day-of",
+    "Start Time": "11:00 AM",
+    "End Time": "11:30 AM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "GSU 3206AB"
+  },
+  {
+    "Event": "Team Forming Event",
+    "Type": "Day-of",
+    "Start Time": "11:30 AM",
+    "End Time": "12:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "GSU 3206AB"
+  },
+  {
+    "Event": "Sponsorship Fair",
+    "Type": "Day-of",
+    "Start Time": "11:00 AM",
+    "End Time": "1:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Lunch",
+    "Type": "Day-of",
+    "Start Time": "12:00 PM",
+    "End Time": "2:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Workshop Block 1",
+    "Type": "Day-of",
+    "Start Time": "1:15 PM",
+    "End Time": "2:15 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "TBD"
+  },
+  {
+    "Event": "Workshop Block 2",
+    "Type": "Day-of",
+    "Start Time": "2:30 PM",
+    "End Time": "3:30 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "TBD"
+  },
+  {
+    "Event": "Workshop Block 3",
+    "Type": "Day-of",
+    "Start Time": "3:30 PM",
+    "End Time": "4:30 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "TBD"
+  },
+  {
+    "Event": "Snack Hour",
+    "Type": "Day-of",
+    "Start Time": "4:00 PM",
+    "End Time": "5:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Workshop Block 4",
+    "Type": "Day-of",
+    "Start Time": "4:00 PM",
+    "End Time": "5:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "TBD"
+  },
+  {
+    "Event": "MLH Mini Event",
+    "Type": "Day-of",
+    "Start Time": "4:00 PM",
+    "End Time": "5:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Workshop Block 5",
+    "Type": "Day-of",
+    "Start Time": "5:00 PM",
+    "End Time": "6:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "TBD"
+  },
+  {
+    "Event": "Dinner",
+    "Type": "Day-of",
+    "Start Time": "6:00 PM",
+    "End Time": "8:30 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Workshop Block 6",
+    "Type": "Day-of",
+    "Start Time": "7:00 PM",
+    "End Time": "8:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "TBD"
+  },
+  {
+    "Event": "Sleeping Rooms Open",
+    "Type": "Day-of",
+    "Start Time": "8:00 PM",
+    "End Time": "8:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "GSU 2423\nGSU 3201\nGSU 3203\nGSU 3205\nGSU 3409"
+  },
+  {
+    "Event": "Boba x Birthday Party",
+    "Type": "Day-of",
+    "Start Time": "9:30 PM",
+    "End Time": "10:30 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Decompression",
+    "Type": "Day-of",
+    "Start Time": "9:00 PM",
+    "End Time": "11:00 PM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "GSU 3205"
+  },
+  {
+    "Event": "Midnight Meal",
+    "Type": "Day-of",
+    "Start Time": "12:00 AM",
+    "End Time": "1:00 AM",
+    "Day": "Saturday, Feb. 24th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Breakfast",
+    "Type": "Day-of",
+    "Start Time": "8:00 AM",
+    "End Time": "10:00 AM",
+    "Day": "Sunday, Feb. 25th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Wakeup Call (Sleep areas close)",
+    "Type": "Day-of",
+    "Start Time": "9:00 AM",
+    "End Time": "9:00 AM",
+    "Day": "Sunday, Feb. 25th",
+    "Location": ""
+  },
+  {
+    "Event": "Submit Project Deadline",
+    "Type": "Day-of",
+    "Start Time": "11:00 AM",
+    "End Time": "11:00 AM",
+    "Day": "Sunday, Feb. 25th",
+    "Location": ""
+  },
+  {
+    "Event": "Lunch",
+    "Type": "Day-of",
+    "Start Time": "11:00 AM",
+    "End Time": "1:00 PM",
+    "Day": "Sunday, Feb. 25th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Demo Fair",
+    "Type": "Day-of",
+    "Start Time": "12:00 PM",
+    "End Time": "2:30 PM",
+    "Day": "Sunday, Feb. 25th",
+    "Location": "Great Hall"
+  },
+  {
+    "Event": "Closing Ceremony",
+    "Type": "Day-of",
+    "Start Time": "3:00 PM",
+    "End Time": "4:00 PM",
+    "Day": "Sunday, Feb. 25th",
+    "Location": "Auditorium"
+  }
+]

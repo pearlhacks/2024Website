@@ -1,0 +1,87 @@
+[
+    {
+      "Sponsor Title": "Principal",
+      "Sponsor Site URL": "https://www.principal.com/about-us/careers",
+      "Sponsor Image URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Principal_Financial_Group_logo.svg/2560px-Principal_Financial_Group_logo.svg.png",
+      "Sponsor Tier": "Pearl"
+    },
+    {
+      "Sponsor Title": "Qorvo",
+      "Sponsor Site URL": "https://www.qorvo.com/",
+      "Sponsor Image URL": "https://www.qorvo.com/-/media/images/qorvopublic/media-resources/logo/qorvo-logo-black-tm-rgb.png?la=en",
+      "Sponsor Tier": "Pearl"
+    },
+    {
+      "Sponsor Title": "Infosys",
+      "Sponsor Site URL": "https://www.infosys.com/careers/americas.html",
+      "Sponsor Image URL": "https://www.infosys.org/content/dam/infosys-org/en/foundation-usa/logos/logo-png.png",
+      "Sponsor Tier": "Gold"
+    },
+    {
+      "Sponsor Title": "Google",
+      "Sponsor Site URL": "https://www.google.com/about/careers/applications/?hl=en_US",
+      "Sponsor Image URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "JP Morgan",
+      "Sponsor Site URL": "https://careers.jpmorgan.com/us/en/home",
+      "Sponsor Image URL": "https://pacdc.org/2017/wp-content/uploads/2022/03/JP-Morgan-Chase-Logo.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "Capital One",
+      "Sponsor Site URL": "https://www.capitalonecareers.com/",
+      "Sponsor Image URL": "https://chicagocaninerescue.org/wp-content/uploads/2018/11/Capital-One-logo.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "Fidelity",
+      "Sponsor Site URL": "https://jobs.fidelity.com/",
+      "Sponsor Image URL": "https://longevity.stanford.edu/wp-content/uploads/2021/03/Fidelity-Logo.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "Appian",
+      "Sponsor Site URL": "https://appian.com/solutions/covid-19/campus-pass.html",
+      "Sponsor Image URL": "https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Appian_Logo.svg/1200px-Appian_Logo.svg.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "Genesys",
+      "Sponsor Site URL": "https://www.genesys.com/",
+      "Sponsor Image URL": "https://partner.zoom.us/wp-content/uploads/2022/08/GEN_id_color_rg-1024x296.png",
+      "Sponsor Tier": "Silver"
+    },
+
+    {
+      "Sponsor Title": "Bandwidth",
+      "Sponsor Site URL": "https://www.bandwidth.com/careers/",
+      "Sponsor Image URL": "https://comptelsite.membershipsoftware.org/content_images/2019/Bandwidth.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "RENCI",
+      "Sponsor Site URL": "https://renci.org/",
+      "Sponsor Image URL": "https://sc.renci.org/static/730bc33a2db051cea5a6f0f5665e7751/1570a/renci.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "Carmax",
+      "Sponsor Site URL": "https://careers.carmax.com/us/en/",
+      "Sponsor Image URL": "https://www.coloradopetpantry.org/wp-content/uploads/2019/08/carmax-logo-e1565720022965.png",
+      "Sponsor Tier": "Silver"
+    },
+    {
+      "Sponsor Title": "Echo3D",
+      "Sponsor Site URL": "https://www.echo3d.com/",
+      "Sponsor Image URL": "https://console.echo3d.com/assets/images/echo3D_logo_cloud.png",
+      "Sponsor Tier": "Custom"
+    },
+    {
+      "Sponsor Title": "Google Cloud",
+      "Sponsor Site URL": "https://cloud.google.com/gcp?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1707554&utm_content=text-ad-none-any-DEV_c-CRE_665735450627-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt-Core-Google+Cloud-KWID_43700077223807304-kwd-6458750523&utm_term=KW_google+cloud-ST_google+cloud&gad_source=1&gclid=Cj0KCQiAzoeuBhDqARIsAMdH14HqaNrT8uzvcsqDYMRFybgGG8StTWdxtxJ-yOU_B_b7dOpFCIOQvw4aAvxaEALw_wcB&gclsrc=aw.ds&hl=en",
+      "Sponsor Image URL": "https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png",
+      "Sponsor Tier": "Custom"
+    }
+  ]

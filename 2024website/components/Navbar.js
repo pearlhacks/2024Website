@@ -17,6 +17,7 @@ import logoSvg from "../public/images/logo.svg";
 import CloseIcon from "@mui/icons-material/Close";
 import SocialMediaIcons from "./SocialMediaIcons";
 import DarkModeToggle from "./DarkModeToggle";
+import MLHBadge from "./MLHBadge";
 
 const Navbar = ({ backgroundColor, toggleTheme, selectedTheme, isWideWindow }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme, isWideWindow }) =
           backgroundColor: backgroundColor,
           boxShadow: "none",
           width: "100%",
-          zIndex: 2,
+          zIndex: 1000,
         }}
       >
         <Container>
@@ -109,62 +110,86 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme, isWideWindow }) =
                 </div>
               </Grid>
 
+              
+
               {/* Right End: Links */}
-              <Grid item xs={6} style={{ textAlign: "right" }}>
-                {isWideWindow ? (
-                  <>
-                    <Link
-                      href="/about"
-                      color="inherit"
-                      style={{
-                        textDecoration: "none",
-                        margin: "0 10px",
-                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
-                      }}
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      href="/faq"
-                      color="inherit"
-                      style={{
-                        textDecoration: "none",
-                        margin: "0 10px",
-                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
-                      }}
-                    >
-                      FAQ
-                    </Link>
-                    <Link
-                      href="/resources"
-                      color="inherit"
-                      style={{
-                        textDecoration: "none",
-                        margin: "0 10px",
-                        color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
-                      }}
-                    >
-                      Resources
-                    </Link>
-                    {/* <DarkModeToggle
-                      toggleTheme={toggleTheme}
-                      selectedTheme={selectedTheme}
-                    /> */}
-                  </>
-                ) : (
-                  <IconButton
-                    color="#ffecac"
-                    onClick={toggleMenu}
-                    style={{
-                      display: "block",
-                      marginLeft: "auto",
-                      color: selectedTheme === "dark" ? "#F5EDC9" : "#1876bd",
-                    }}
-                  >
-                    <MenuIcon />
-                  </IconButton>
-                )}
-              </Grid>
+              <Grid item xs={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+  
+
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    {isWideWindow ? (
+      <div style={{marginRight: 10}}>
+        <Link
+          href="/about"
+          color="inherit"
+          style={{
+            textDecoration: "none",
+            margin: "0 10px",
+            color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
+          }}
+        >
+          About
+        </Link>
+        <Link
+          href="/schedule"
+          color="inherit"
+          style={{
+            textDecoration: "none",
+            margin: "0 10px",
+            color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
+          }}
+        >
+          Schedule
+        </Link>
+        <Link
+          href="/faq"
+          color="inherit"
+          style={{
+            textDecoration: "none",
+            margin: "0 10px",
+            color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
+          }}
+        >
+          FAQ
+        </Link>
+        <Link
+          href="/resources"
+          color="inherit"
+          style={{
+            textDecoration: "none",
+            margin: "0 10px",
+            color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
+          }}
+        >
+          Resources
+        </Link>
+        {/* <Link
+          href="/schedule"
+          color="inherit"
+          style={{
+            textDecoration: "none",
+            margin: "0 10px",
+            color: selectedTheme === "dark" ? "#ffecac" : "#1876bd",
+          }}
+        >
+          Schedule
+        </Link> */}
+        {/* Additional Links if any */}
+      </div>
+    ) : (
+      <IconButton
+        onClick={toggleMenu}
+        style={{
+          color: selectedTheme === 'dark' ? '#F5EDC9' : '#1876bd',
+        }}
+      >
+        <MenuIcon />
+      </IconButton>
+    )}
+    <MLHBadge isWideWindow={isWideWindow} />
+  </div>
+</Grid>
+
             </Grid>
           </Toolbar>
         </Container>
@@ -198,6 +223,13 @@ const Navbar = ({ backgroundColor, toggleTheme, selectedTheme, isWideWindow }) =
                 {" "}
                 {/* Remove underline */}
                 <ListItemText primary="About Us" />
+              </Link>
+            </ListItem>
+            <ListItem button>
+              <Link overlay href="/schedule" color="inherit" underline="none">
+                {" "}
+                {/* Remove underline */}
+                <ListItemText primary="Schedule" />
               </Link>
             </ListItem>
             <ListItem button>

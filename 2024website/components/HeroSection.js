@@ -1,30 +1,23 @@
 import React from "react";
 import { Container, Typography, Grid } from "@mui/material";
 import mascotImage from "../public/images/PH2024_MainGraphic.svg";
-import backgroundDark from "../public/images/Website_BG_Dark.svg";
-import backgroundLight from "../public/images/Website_BG_Light.svg";
+import backgroundDark from "../public/images/Website_NoBG_Dark.svg";
+import backgroundLight from "../public/images/Website_NoBG_Light.svg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { HeroButton } from "./CustomButton";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { motion } from "framer-motion";
+import StarAnimation from "./StarAnimation";
+import RegisterButton from "./RegisterButton";
 
-
-const scrollToContent = () => {
-  window.scrollTo({
-    top: 1000, // Scroll to 20px from the top
-    behavior: "smooth",
-  });
-};
 
 const HeroSection = ({ selectedTheme, isWideWindow }) => {
-
+  
   return (
     <div
       style={{
         background: `url(${selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
           })`,
-        backgroundSize: "cover",
-        backgroundPosition: "center bottom",
+        backgroundSize: selectedTheme === "dark" ? 'cover' : "cover",
+        backgroundPosition: "center top",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -34,7 +27,7 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
     >
       {/* Hero Content */}
       <Container
-        style={{ display: "flex", justifyContent: "center", padding: "50px", zIndex: 2 }}
+        style={{ display: "flex", justifyContent: "center", padding: "50px", zIndex: 3 }}
       >
         <Grid container spacing={4}>
           <Grid
@@ -96,7 +89,7 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
                 variant="h1"
 
                 component="p"
-                style={{ marginBottom: "5px", color: isWideWindow ? "#ffecac" : "#f3c35d" }}
+                style={{ marginBottom: "5px", color: "#ffecac" }}
               >
                 PEARL HACKS
               </Typography>
@@ -112,19 +105,10 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
                 }}
               >
                 <AccessTimeIcon style={{ marginRight: "8px" }} />
-                February 23-25th, 2024
+                February 24-25th, 2024
               </Typography>
 
-              <HeroButton theme={selectedTheme}>
-                <a
-                  href="https://pearlhacks.us17.list-manage.com/subscribe?u=211594c9660fc6331ed123271&id=ebe9408826"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  Join mailing list
-                </a>
-              </HeroButton>
+              <RegisterButton selectedTheme={selectedTheme} />
             </div>
           </Grid>
         </Grid>
@@ -140,7 +124,7 @@ const HeroSection = ({ selectedTheme, isWideWindow }) => {
           <KeyboardArrowDownIcon />
         </IconButton>
       </Container> */}
-
+      <StarAnimation />
     </div>
   );
 };

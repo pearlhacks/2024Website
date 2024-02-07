@@ -24,7 +24,7 @@ const Sponsor = ({ selectedTheme, isWideWindow }) => {
         <section className="container pb-5 pt-3 rounded" id="sponsorlogos">
           {/* Add your sponsor board here */}
           <Typography variant="h3" align="center" mt={5} mb={5}>
-            Our 2023 Sponsors
+            Our 2024 Sponsors
           </Typography>
           <SponsorList isWideWindow={isWideWindow} style={{ zIndex: 3 }} />
         </section>

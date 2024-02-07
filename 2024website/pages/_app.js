@@ -10,15 +10,17 @@ import { darkTheme, lightTheme } from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
-
+import { BackToTopButton } from "../components/BackToTopButton";
 // Client-side cache shared for the whole session
 // of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const [activeTheme, setActiveTheme] = useState(lightTheme);
   const [selectedTheme, setSelectedTheme] = useState("light");
+  const [isVisible, setIsVisible] = useState(false);
 
   // Function to get the active theme based on selectedTheme
   function getActiveTheme(themeMode) {
@@ -28,14 +30,27 @@ export default function MyApp(props) {
   // Function to toggle the theme
   const toggleTheme = () => {
     const desiredTheme = selectedTheme === "light" ? "dark" : "light";
-    setSelectedTheme(desiredTheme);
+    // setSelectedTheme('desiredTheme');
+    setSelectedTheme('desiredTheme')
+  };
+
+  // Function to check if the user has scrolled down
+  const toggleVisibility = () => {
+    const scrolled = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const scrollPercent = (scrolled / (documentHeight - windowHeight)) * 100;
+    if (scrollPercent > 10) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
   };
 
   // Automatically change the theme based on time
   useEffect(() => {
     const currentTime = new Date().getHours();
-    const isDayTime = currentTime >= 6 && currentTime < 18; // You can adjust the time range as needed
-
+    const isDayTime = currentTime >= 6 && currentTime < 17; // You can adjust the time range as needed
     setSelectedTheme(isDayTime ? "light" : "dark");
   }, []);
 
@@ -62,6 +77,14 @@ export default function MyApp(props) {
     };
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -73,7 +96,6 @@ export default function MyApp(props) {
         build upon. */}
         <CssBaseline />
         <Navbar
-          paddingTop={"10px"}
           backgroundColor={"transparent"}
           toggleTheme={toggleTheme}
           selectedTheme={selectedTheme}
@@ -85,6 +107,8 @@ export default function MyApp(props) {
           selectedTheme={selectedTheme}
           isWideWindow={isWideWindow}
         />
+        {isVisible && <BackToTopButton isWideWindow={isWideWindow} />}
+        
       </ThemeProvider>
     </CacheProvider>
   );

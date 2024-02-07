@@ -18,6 +18,7 @@ const FAQ = ({ selectedTheme, isWideWindow }) => {
     return acc;
   }, {});
 
+  
 
   return (
     <div>

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import HeroSection from "../components/HeroSection";
-import AboutUs from "../components/AboutUs";
+// import AboutUs from '../components/AboutUs'
+import Anniversary from "../components/Anniversary";
 import Sponsor from "../components/Sponsor";
 import Footer from "../components/Footer";
 import { useRef } from 'react';
@@ -38,33 +39,34 @@ export default function Home({ selectedTheme, isWideWindow }) {
           }}
           style={{
             position: 'absolute',
-            bottom: '70px', // adjust as needed
+            bottom: isWideWindow ? '70px' : '15px', // adjust as needed
             left: '50%',
             cursor: 'pointer',
             zIndex: 2,
-            transform: 'translateX(-50%)' // Center the icon horizontally
+            transform: 'translateX(-50%)', // Center the icon horizontally
           }}
           onClick={scrollToAboutUs}
         >
-          <ArrowDownwardIcon style={{  color: '#96d0ff', fontSize: '25px' }} />
+          <ArrowDownwardIcon style={{  color: selectedTheme === 'light' ? '#f7cf68' : '#1876BD', fontSize: '25px' }} />
         </motion.div>
-        <div ref={aboutUsRef}>
-          <AboutUs isWideWindow={isWideWindow} selectedTheme={selectedTheme} />
-        </div>
-          <Sponsor isWideWindow={isWideWindow} selectedTheme={selectedTheme} />
-          {
-            isWideWindow ? <img
+        {<img
             src={selectedTheme === "light" ? transitionSvgDark.src : transitionSvgLight.src}
             alt="Hero Transition"
             style={{
               position: "absolute",
-              bottom: 0,
+              bottom: -10,
               left: 0,
+              backgroundSize: 'contain',
               width: "100%",
               zIndex: 1,
             }}
-          /> : null
-          }
+          />}
+        <div ref={aboutUsRef}>
+          {/* <AboutUs isWideWindow={isWideWindow} selectedTheme={selectedTheme} /> */}
+          <Anniversary isWideWindow={isWideWindow} selectedTheme={selectedTheme} />
+        </div>
+          <Sponsor isWideWindow={isWideWindow} selectedTheme={selectedTheme} />
+          
           
         </div>
 

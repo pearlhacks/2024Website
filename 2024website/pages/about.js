@@ -4,6 +4,7 @@ import leftImage from "../public/images/Photo1.JPG"; // Add your left image path
 import rightImage from "../public/images/Photo2.JPG"; // Add your right image path
 import { PrimaryButton } from "../components/CustomButton";
 import GenericLayout from "../components/GenericLayout";
+import Team from "../components/Team";
 
 const About = ({ selectedTheme, isWideWindow }) => {
   return (
@@ -139,6 +140,19 @@ const About = ({ selectedTheme, isWideWindow }) => {
             visitors to be respectful of our participants’ gender identities and
             expressions.
           </Typography>
+        </div>
+        <div style={{ marginTop: "20px" }}>
+          {/* Right image */}
+          <br />
+          <br />
+          <Typography
+            variant="h3"
+            color={"#eda901"}
+            style={{ marginBottom: "20px" }}
+          >
+            Our Team
+          </Typography>
+          <Team selectedTheme={selectedTheme} isWideWindow={isWideWindow}  />
         </div>
       </GenericLayout>
     </div>

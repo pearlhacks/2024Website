@@ -76,7 +76,7 @@ const SponsorBoard = ({ isWideWindow }) => {
                               : "40px"
                             : tier === "Silver"
                             ? isWideWindow
-                              ? "50px"
+                              ? "60px"
                               : "30px"
                             : isWideWindow
                             ? "50px"

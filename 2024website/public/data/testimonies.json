@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Kate Ma",
+      "photoURL": "./images/testimonies/kate.jpeg",
+      "devpost": "https://devpost.com/software/starry-night-physics",
+      "experience": "Pearl Hacks was so much fun! I don’t often have a good chance to sit down for an entire day and work on something unrelated to class for hours on end, so Pearl Hacks was the perfect opportunity to harness my creativity and ideas and see what I could make with my partner. Of course, I also loved all the free swag we got! I was initially very nervous to demo, but once we got into it, I really enjoyed showing other people the project we made. Overall, it was an incredible experience and I enjoyed it so much!",
+      "projectTitle": "Starry Night Physics",
+      "projectDescription": "A simulation to illustrate gravitational forces between either preset or user-defined stars.",
+      "from": "PH2023"
+    },
+    {
+      "name": "Chalisa Phoomsakha",
+      "photoURL": "./images/testimonies/chalisa.png",
+      "devpost": "https://devpost.com/software/sparespace-mo3qru",
+      "experience": "Very positive experience, allowed me to feel more confident in my abilities and recover from a dip in academic motivation and performance. I also was invited to another hackathon where I won my first internship! Overall an extremely positive impact.",
+      "projectTitle": "SpareSpace",
+      "projectDescription": "Connecting students with local businesses to offer underutilized spaces at affordable prices.",
+      "from": "PH2023"
+    },
+    {
+      "name": "Sonia Zhu",
+      "photoURL": "./images/testimonies/sonia.jpg",
+      "devpost": "https://devpost.com/software/green-scene",
+      "experience": "I entered the hackathon with no background in computer science, nevertheless, I came across many opportunities to engage in creative projects and diverse workshops. This experience allowed me to hone my design and presentation skills. I firmly believe that there is a place for everyone at Pearl Hacks, regardless of their background or experience level. The hackathon and participants inspired me to explore the possibilities in tech and exposed me to the essence of a supportive and empowering environment. ",
+      "projectTitle": "Green Scene",
+      "projectDescription": "Plants are cute but can be a lot to remember. Green Scene is an app that encourages plant growth and sustainability by reminding plant parents to water their children and connect with other owners!",
+      "from": "PH2023"
+    }
+  ]
+  

@@ -3,18 +3,22 @@ import { Container, Typography, Grid } from "@mui/material";
 import Link from "next/link";
 import transitionSvgDark from "../public/images/Transition.svg";
 import transitionSvgLight from "../public/images/TransitionLight.svg";
-import graphicSvg from "../public/images/Secondary Graphic no bg.svg";
 import AccentLight1 from "../public/images/AccentLight1.svg";
 import AccentLight3 from "../public/images/AccentLight3.svg";
 import AccentDark1 from "../public/images/AccentDark1.svg";
 import AccentDark3 from "../public/images/AccentDark3.svg";
+import HackerL from "../public/images/HackerL.svg"
+import HackerD from "../public/images/HackerD.svg"
 import { SecondaryButton } from "./CustomButton";
+import AchievementBanner from "./AchievementBanner";
+import Carousel from "./Carousel";
+import testimonies from '../public/data/testimonies.json'
 
-const AboutUs = ({ selectedTheme, isWideWindow }) => {
+const Anniversary = ({ selectedTheme, isWideWindow }) => {
   return (
     <div
       style={{
-        backgroundColor: selectedTheme == "dark" ? "#317fb0" : "#67afd3",
+        backgroundColor: selectedTheme == "dark" ? "#247fad" : "#67afd3",
         minHeight: "100vh",
         display: "flex",
 
@@ -25,8 +29,8 @@ const AboutUs = ({ selectedTheme, isWideWindow }) => {
         style={{
           flex: 1,
           position: "relative",
-          paddingLeft: isWideWindow ? "100px" : "50px",
-          paddingRight: isWideWindow ? "100px" : "50px",
+          paddingLeft: isWideWindow ? "100px" : "35px",
+          paddingRight: isWideWindow ? "100px" : "35px",
         }}
       >
         {isWideWindow ? 
@@ -58,18 +62,30 @@ const AboutUs = ({ selectedTheme, isWideWindow }) => {
           style={{
             position: "relative",
             paddingTop: "200px", // Add padding for spacing
-            padding: "50px", // Add padding for spacing
+            padding: isWideWindow ? "50px" : '20px', // Add padding for spacing
+            textAlign: "center",
+            alignContent: "center",
+            zIndex: 1000,
           }}
         >
-          <br />
-          <br />
-          <br />
+         
           <br />
           <br />
           <br />
           <Typography variant="h3" component="h1">
-            What is Pearl Hacks?
+            Join Us to Celebrate Pearl Hacks's
           </Typography>
+          <br />
+          <br />
+          <img
+          src={selectedTheme === "light" ? HackerL.src : HackerD.src} // Replace with the path to your right overlay SVG
+          style = {{
+            width: "100%"
+          }}
+          alt="Right Overlay" />
+          <br />
+          <br />
+ 
           <Typography
             variant="p"
             component="p"
@@ -77,19 +93,13 @@ const AboutUs = ({ selectedTheme, isWideWindow }) => {
           >
             Pearl Hacks is a hackathon for women and gender non-conforming
             individuals in tech. We especially cater to first-time hackers who
-            are looking for a supportive environment to explore technology.
-          </Typography>
-          <Typography
-            variant="p"
-            component="p"
-            style={{ margin: "20px 0" }} // Add margin for spacing
-          >
-            Participants work in teams to create incredible projects in 24 hours
+            are looking for a supportive environment to explore technology. Participants work in teams to create incredible projects in 24 hours
             with the help of excellent mentors, workshops, and tech talks. All
             the while, they’ll get to meet some fantastic people, enjoy fun
             games, collect swag, and eat free food.
           </Typography>
-          <Grid container spacing={2} marginBottom={"30px"}>
+          
+          <Grid container spacing={2} marginBottom={"30px"} justifyContent="center">
             <Grid item>
               <Link href="/about" passHref>
                 <SecondaryButton>About Us</SecondaryButton>
@@ -101,51 +111,34 @@ const AboutUs = ({ selectedTheme, isWideWindow }) => {
               </Link>
             </Grid>
           </Grid>
-          <Grid container alignItems="center" spacing={"5px"}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: isWideWindow ? "row" : "column",
-                alignItems: "center", // Center vertically
-              }}
-            >
-              <img
-                src={graphicSvg.src}
-                alt="Your Image"
-                style={
-                  isWideWindow
-                    ? {
-                        width: "400px", // Adjust the width as needed
-                        height: "auto", // Maintain aspect ratio
-                        marginLeft: "80px", // Add spacing between image and text
-                        marginRight: "20px", // Add spacing between image and text
-                      }
-                    : {
-                        width: "80%", // Adjust the width as needed
-                        height: "auto", // Maintain aspect ratio
-                        marginBottom: "20px", // Add spacing between image and text
-                      }
-                }
-              />
-              <div>
-                <Typography variant="h4" component="p">
-                  DON'T KNOW HOW TO CODE?
-                </Typography>
-                <Typography
-                  variant="p"
-                  component="p"
-                  style={{ margin: "20px 0" }}
-                >
-                  Come anyway! We have workshops, mentors, and fun events for
-                  all skill levels.
-                </Typography>
-                <Link underline='none' href="/faq" passHref>
-                  <SecondaryButton>More FAQs</SecondaryButton>
-                </Link>
-              </div>
-            </div>
+          <br />
+          <br />
+
+          <Typography variant="h3" component="h1">
+            Our Achievements
+          </Typography>
+          <br />
+          <Grid container justifyContent="center" spacing={isWideWindow ? 8 : 0} marginBottom={"30px"}>
+            <Grid item>
+              <AchievementBanner selectedTheme={selectedTheme} text={"30+ sponsors"} />
+            </Grid>
+            <Grid item>
+              <AchievementBanner selectedTheme={selectedTheme} text={"1000+ hackers"} />
+            </Grid>
+            <Grid item>
+              <AchievementBanner selectedTheme={selectedTheme} text={"70+ projects"} />
+            </Grid>
           </Grid>
+          <br />
+          <br />
+
+          <Typography variant="h3" component="h1">
+            Testimonies
+          </Typography>
+          <br />
+          <Carousel selectedTheme={selectedTheme} isWideWindow={isWideWindow} items={testimonies} />
         </Container>
+        
       </div>
 
       <div
@@ -168,4 +161,4 @@ const AboutUs = ({ selectedTheme, isWideWindow }) => {
   );
 };
 
-export default AboutUs;
+export default Anniversary;
