@@ -1,0 +1,101 @@
+{
+  "Beginner Hackers": [
+      {
+          "Title": "Hacking 101 — Lessons Learned from My First Hackathon",
+          "Link": "https://pearlhacks.com/blog/hacking-101-lessons-learned-from-my-first-hackathon.html"
+      },
+      {
+          "Title": "WTF is a Hackathon",
+          "Link": "https://medium.com/hackathons-anonymous/wtf-is-a-hackathon-92668579601"
+      },
+      {
+          "Title": "Getting the most out of your first hackathon",
+          "Link": "https://news.mlh.io/your-first-hackathon-10-07-2013"
+      },
+      {
+          "Title": "Introduction to Web Development",
+          "Link": "https://github.com/tasnias/ph-intro-to-web"
+      }
+  ],
+  "General Hacking": [
+      {
+          "Title": "A brief history of hackathons",
+          "Link": "https://www.youtube.com/watch?v=Zr6VPAe9CKU&ab_channel=MajorLeagueHacking"
+      },
+      {
+          "Title": "How to Crush Your Hackathon Demo",
+          "Link": "https://techcrunch.com/2014/09/01/how-to-crush-your-hackathon-demo/"
+      },
+      {
+        "Title": "Hackathon Project Generator",
+        "Link": "https://www.wolframcloud.com/objects/microsites/ProjectGenerator/idea?n=669"
+    },
+    {
+        "Title": "Building projects effectively at hackathons",
+        "Link": "https://hackthenorth.medium.com/building-projects-effectively-at-hackathons-997e5b1c2b1d"
+    }
+  ],
+  "Pearl Hacks Projects": [ 
+      {
+          "Title": "Pearl Hacks 2023 Projects",
+          "Link": "https://pearlhacks2023.devpost.com/",
+          "Icon": "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/002/349/388/datas/original.png"
+      },
+      {
+          "Title": "Pearl Hacks 2022 Projects",
+          "Link": "https://pearlhacks2022.devpost.com/",
+          "Icon": "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/001/763/191/datas/original.png"
+      },
+      {
+          "Title": "Pearl Hacks 2021 Projects",
+          "Link": "https://pearlhacks2021.devpost.com/",
+          "Icon": "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/001/373/133/datas/original.png"
+      },
+      {
+          "Title": "Pearl Hacks 2020 Projects",
+          "Link": "https://pearlhacks2020.devpost.com/",
+          "Icon": "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/000/942/838/datas/original.png"
+      }
+  ],
+  "Social & Mental Resources": [
+    {
+      "Title": "How to Deal With Social Anxiety",
+      "Link": "https://psychcentral.com/anxiety/how-to-deal-with-social-anxiety"
+  },
+  {
+    "Title": "Breathing Techniques for Stress Relief",
+    "Link": "https://www.webmd.com/balance/stress-management/stress-relief-breathing-techniques"
+},
+{
+  "Title": "How to Deal With High-Pressure Situations at Work",
+  "Link": "https://hbr.org/2022/05/how-to-deal-with-high-pressure-situations-at-work"
+},
+{
+  "Title": "How to Overcome Impostor Syndrome",
+  "Link": "https://www.apa.org/monitor/2021/06/cover-impostor-phenomenon"
+}
+
+  ],
+  "Non-Traditional Technologists": [
+      {
+          "Title": "Hackathoning as a Non-Developer",
+          "Link": "https://medium.com/@xinisterlayer/hackathon-ing-as-a-non-developer-ec994e50458c"
+      },
+      {
+          "Title": "It's not too late for female hackers",
+          "Link": "https://medium.com/@kt_seagull/its-not-too-late-for-female-hackers-f7efb084e8a"
+      },
+      {
+          "Title": "Out in Tech",
+          "Link": "https://outintech.com/"
+      },
+      {
+          "Title": "Not a Tech Bro, but Not a Tech Lady",
+          "Link": "https://modelviewculture.com/pieces/not-a-tech-bro-but-not-a-tech-lady"
+      },
+      {
+          "Title": "Minding the gap: How I navigate tech as a queer woman of color",
+          "Link": "https://www.glaad.org/amp/navigating-tech-queer-women-of-color"
+      }
+  ]
+}

@@ -1,20 +1,58 @@
 import { createTheme } from "@mui/material/styles";
 
 // Define your custom colors
-const customColors = {
-  primary: {
-    main: "#eda901", // Define your primary color
+
+export const lightTheme = createTheme({
+  typography: {
+    fontFamily: "ProximaNova",
+    h1: {
+      fontFamily: "CaviarDreams",
+      fontSize: "3rem",
+      fontWeight: "bold",
+      lineHeight: "3rem",
+      color: "#ffecac",
+    },
+    h2: {
+      fontFamily: "CaviarDreams",
+      fontSize: "3em",
+      fontWeight: 700,
+      lineHeight: "3rem",
+      color: "#ffecac", // Use the custom color here
+    },
+    h3: {
+      fontFamily: "CaviarDreams",
+      fontSize: "1.75rem",
+      color: "#1876bd",
+      fontWeight: 700,
+    },
+    h4: {
+      fontSize: "1.25rem",
+      fontFamily: "CaviarDreams",
+      color: "#F5EDC9", // Use the custom color here
+      fontWeight: 700,
+    },
+    p: {
+      fontWeight: 400,
+      fontSize: "1rem",
+      lineHeight: "1.5rem",
+      color: "#F5EDC9", // Use the custom color here
+    },
   },
-  secondary: {
-    main: "#96d0ff", // Define your secondary color
+  palette: {
+    primary: {
+      main: "#ffecac", // Specify the main color
+    },
+    secondary: {
+      main: "#eda901",
+    },
+    accent: {
+      main: "#96d0ff",
+    },
   },
-  accent: {
-    main: "#9bb159", // Define your accent color
-  },
-};
+});
 
 // Create a theme instance.
-const theme = createTheme({
+export const darkTheme = createTheme({
   typography: {
     fontFamily: "ProximaNova",
     h1: {
@@ -51,10 +89,14 @@ const theme = createTheme({
     },
   },
   palette: {
-    primary: customColors.primary,
-    secondary: customColors.secondary,
-    accent: customColors.accent,
+    primary: {
+      main: "#F5EDC9", // Specify the main color
+    },
+    secondary: {
+      main: "#96d0ff",
+    },
+    accent: {
+      main: "#9bb159",
+    },
   },
 });
-
-export default theme;

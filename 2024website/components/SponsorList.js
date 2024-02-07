@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import sponsorsData from "../public/data/sponsors.json";
 
-const SponsorBoard = () => {
+const SponsorBoard = ({ isWideWindow }) => {
   const handleSponsorClick = (sponsorUrl) => {
     window.open(sponsorUrl, "_blank"); // Open the sponsor's site in a new tab
   };
@@ -22,14 +20,14 @@ const SponsorBoard = () => {
 
   // Order tiers as desired
   const tierOrder = ["Pearl", "Gold", "Silver", "Custom"];
-
+  
   return (
     <Paper
       elevation={0} // Remove the shadow
       style={{
-        padding: "10px",
+        padding: isWideWindow ? "50px" : "10px", // Add padding for spacing
         backgroundColor: "#F5EDC9", // Add the background color
-        borderRadius: "3%", // Make it rounder
+        borderRadius: "5%", // Make it rounder
         paddingBottom: "50px", // Add padding for spacing
       }}
     >
@@ -69,12 +67,20 @@ const SponsorBoard = () => {
                       style={{
                         maxHeight:
                           tier === "Pearl"
-                            ? "150px"
+                            ? isWideWindow
+                              ? "120px"
+                              : "50px"
                             : tier === "Gold"
-                            ? "100px"
+                            ? isWideWindow
+                              ? "100px"
+                              : "40px"
                             : tier === "Silver"
+                            ? isWideWindow
+                              ? "60px"
+                              : "30px"
+                            : isWideWindow
                             ? "50px"
-                            : "50px", // Adjust the sizes based on the tier
+                            : "20px", // Adjust the sizes based on the tier
                       }}
                     />
                   </Link>

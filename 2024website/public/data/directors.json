@@ -1,0 +1,131 @@
+[
+  {
+    "Name": "Rashi Jagani",
+    "Title": "Experience/Executive Chair",
+    "Team": "Experience",
+    "Headshot URL": "./images/headshots/rashi.jpg",
+    "Pronouns": "she/her/hers"
+  },
+    
+    {
+      "Name": "Saurya Acharya",
+      "Title": "Senior Chair",
+      "Team": "Sponsorship",
+      "Headshot URL": "./images/headshots/saurya.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Chiara Sabato",
+      "Title": "Logistics Chair",
+      "Team": "Logistics",
+      "Headshot URL": "./images/headshots/chiara.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Harin Lim",
+      "Title": "Marketing Chair",
+      "Team": "Marketing",
+      "Headshot URL": "./images/headshots/harin.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Lily Su",
+      "Title": "Sponsorship Chair",
+      "Team": "Sponsorship",
+      "Headshot URL": "./images/headshots/lily.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Ana Lopez Murillo",
+      "Title": "Director of Design",
+      "Team": "Marketing",
+      "Headshot URL": "./images/headshots/ana.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Angelina Su",
+      "Title": "Director of Nutrition",
+      "Team": "Logistics",
+      "Headshot URL": "./images/headshots/angelina.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Caitlyn Kim",
+      "Title": "Director of Physical Logistics",
+      "Team": "Logistics",
+      "Headshot URL": "./images/headshots/caitlyn.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Ce'Niyah Ellison",
+      "Title": "Director of Sponsorship Programming",
+      "Team": "Sponsorship",
+      "Headshot URL": "./images/headshots/ceniyah.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    
+    {
+      "Name": "Kiki Wang",
+      "Title": "Director of Event Support",
+      "Team": "Experience",
+      "Headshot URL": "./images/headshots/kiki.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Kyler Chen",
+      "Title": "Director of Virtual Logistics",
+      "Team": "Logistics",
+      "Headshot URL": "./images/headshots/kyler.jpg",
+      "Pronouns": "he/him/his"
+    },
+    {
+      "Name": "Malak Soubai",
+      "Title": "Director of Beginners Workshop",
+      "Team": "Experience",
+      "Headshot URL": "./images/headshots/malak.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Meliora Ho",
+      "Title": "Director of Technology",
+      "Team": "Marketing",
+      "Headshot URL": "./images/headshots/mel.jpg",
+      "Pronouns": "she/her/hers"
+    },
+
+    {
+      "Name": "Olivia Wen",
+      "Title": "Director of Hacker Experience",
+      "Team": "Experience",
+      "Headshot URL": "./images/headshots/olivia.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Shaina Patel",
+      "Title": "Director of Sponsor Outreach",
+      "Team": "Sponsorship",
+      "Headshot URL": "./images/headshots/shaina.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Shefali Pai",
+      "Title": "Director of Transportation",
+      "Team": "Logistics",
+      "Headshot URL": "./images/headshots/shefali.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Sonia Zhu",
+      "Title": "Director of Publicity",
+      "Team": "Marketing",
+      "Headshot URL": "./images/headshots/sonia.jpg",
+      "Pronouns": "she/her/hers"
+    },
+    {
+      "Name": "Sophia Zou",
+      "Title": "Director of Media",
+      "Team": "Marketing",
+      "Headshot URL": "./images/headshots/sophia.jpg",
+      "Pronouns": "she/her/hers"
+    }
+  ]

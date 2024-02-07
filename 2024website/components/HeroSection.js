@@ -1,25 +1,35 @@
 import React from "react";
-import { Container, Typography, Button, Grid } from "@mui/material";
-import mascotImage from "../public/images/PH2024_MainGraphic.png";
-import background from "../public/images/WebsiteBG_Updated.svg";
+import { Container, Typography, Grid } from "@mui/material";
+import mascotImage from "../public/images/PH2024_MainGraphic.svg";
+import backgroundDark from "../public/images/Website_NoBG_Dark.svg";
+import backgroundLight from "../public/images/Website_NoBG_Light.svg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { PrimaryButton } from "./CustomButton";
-const HeroSection = () => {
+import { motion } from "framer-motion";
+import StarAnimation from "./StarAnimation";
+import RegisterButton from "./RegisterButton";
+
+
+const HeroSection = ({ selectedTheme, isWideWindow }) => {
+  
   return (
     <div
       style={{
-        background: `url(${background.src})`, // Set background image
-        backgroundSize: "cover", // Make the background cover the entire element
-        minHeight: "100vh",
+        background: `url(${selectedTheme === "dark" ? backgroundDark.src : backgroundLight.src
+          })`,
+        backgroundSize: selectedTheme === "dark" ? 'cover' : "cover",
+        backgroundPosition: "center top",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center", // Center content horizontally
-        justifyContent: "center", // Center content vertically
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       {/* Hero Content */}
-      <Container>
-        <Grid container spacing={2}>
+      <Container
+        style={{ display: "flex", justifyContent: "center", padding: "50px", zIndex: 3 }}
+      >
+        <Grid container spacing={4}>
           <Grid
             item
             xs={12}
@@ -27,12 +37,34 @@ const HeroSection = () => {
             style={{ display: "flex", alignItems: "center" }}
           >
             {/* Mascot Image */}
-            <img
+
+            {/* <img
               src={mascotImage.src}
               alt="Mascot"
-              style={{ width: "100%", height: "auto" }}
+              style={{
+                display: "block",
+                margin: "0 auto",
+                width: "100%",
+                height: "auto",
+              }}
+              id="animate-right"
+            /> */}
+            <motion.img
+              src={mascotImage.src}
+              alt="Mascot"
+              style={{
+                display: "block",
+                margin: "0 auto",
+                width: "100%",
+                height: "auto",
+              }}
+              initial={{ opacity: 0, x: -100 }} // start from the left and faded out
+              animate={{ opacity: 1, x: 0 }} // animate to fully visible and in position
+              transition={{ duration: 1 }} // adjust duration as needed
+              id="animate-right"
             />
           </Grid>
+          {/* create horizontal width */}
           <Grid
             item
             xs={12}
@@ -46,17 +78,18 @@ const HeroSection = () => {
                 component="h4"
                 style={{
                   fontStyle: "italic",
-                  color: "#f7cf68",
+                  color: selectedTheme === "dark" ? "#96d0ff" : "#1876bd",
                   marginBottom: "5px",
                 }}
               >
-                soar with
+                rise with
               </Typography>
 
               <Typography
                 variant="h1"
+
                 component="p"
-                style={{ marginBottom: "5px" }}
+                style={{ marginBottom: "5px", color: "#ffecac" }}
               >
                 PEARL HACKS
               </Typography>
@@ -66,19 +99,32 @@ const HeroSection = () => {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  color: "#f7cf68",
+                  color: selectedTheme === "dark" ? "#96d0ff" : "#1876bd",
                   marginBottom: "5px",
+                  fontWeight: "700",
                 }}
               >
                 <AccessTimeIcon style={{ marginRight: "8px" }} />
-                February 23-25th, 2024
+                February 24-25th, 2024
               </Typography>
 
-              <PrimaryButton>Register now</PrimaryButton>
+              <RegisterButton selectedTheme={selectedTheme} />
             </div>
           </Grid>
         </Grid>
       </Container>
+      {/* <Container style={{zIndex: 2,}}>
+        <IconButton
+          aria-label="scroll down"
+          color="accent" // Change to "primary" if "accent" doesn't work
+          onClick={scrollToContent}
+          style={{ position: "relative", top: "50px", left: "50%" }}
+          id="downIndicator"
+        >
+          <KeyboardArrowDownIcon />
+        </IconButton>
+      </Container> */}
+      <StarAnimation />
     </div>
   );
 };

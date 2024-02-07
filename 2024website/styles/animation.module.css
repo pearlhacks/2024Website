@@ -1,0 +1,60 @@
+@-webkit-keyframes bobble {
+  0% {
+      transform: translateY(0)
+  }
+
+  100% {
+      transform: translateY(-1rem)
+  }
+}
+
+@keyframes bobble {
+  0% {
+      transform: translateY(0)
+  }
+
+  100% {
+      transform: translateY(-1rem)
+  }
+}
+
+@-webkit-keyframes launch {
+  0% {
+      transform: translateX(-6rem);
+      opacity: 0
+  }
+
+  100% {
+      transform: translateX(0);
+      opacity: 1
+  }
+}
+
+@keyframes launch {
+  0% {
+      transform: translateX(-6rem);
+      opacity: 0
+  }
+
+  100% {
+      transform: translateX(0);
+      opacity: 1
+  }
+}
+
+#animate-right {
+  height: 100%;
+  transform: translateY(4rem);
+  opacity: 0;
+  animation: launch 1s 1s ease-out forwards;
+  -webkit-animation: launch 1s 1s ease-out forwards;
+}
+
+#down-indicator {
+  position: relative;
+  bottom: 2rem;
+  animation: bobble 1s infinite alternate;
+  cursor: pointer;
+  font-size: 48px
+}
+  
